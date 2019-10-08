@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #CCDAE9;
+  min-height: 100vh;
+  height: 100%;
+  position: relative;
+  font-size: 14px;
+  font-family: "LantingHei SC", "Open Sans", "Microsoft YaHei", "Hiragino Sans GB", "黑体", "SimHei", "STHeiti", "宋体", sans-serif;
+}
+
+.container {
+  max-width: 100%;
+  width: 480px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 0;
+  color: #333;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.copyright {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 0.8em;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 300;
+  margin: 0;
+}
+
+a {
+  color: #46549E;
+  text-decoration: none;
+}
+
+.cover {
+  background: url('../../posts/images/2016-04-11.png') no-repeat #46549E;
+  background-size: 100%;
+  height: 220px;
+}
+
+.cover h1 {
+  margin: 0;
+  color: #fff;
+  padding: 40px;
+}
+
+.title {
+  background: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 40%;
+}
+
+.content {
+  padding: 40px;
+  margin: 0;
+}
+
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ol li {
+  border-bottom: 1px solid rgba(80, 80, 80, 0.4);
+  padding: 20px 0;
+}
+
+li h4 {
+  font-weight: 500;
+}
+
+ol li p {
+  color: #999999;
+  margin: 0;
+}

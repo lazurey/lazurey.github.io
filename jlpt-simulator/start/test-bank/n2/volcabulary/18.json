@@ -1,0 +1,22 @@
+{
+  "stem": "4月1日からガス代や電気代などの公共料金が（ 　）に値上がりする。",
+  "options": [{
+    "id": "A",
+    "content": "一向"
+  }, {
+    "id": "B",
+    "content": "一斉"
+  }, {
+    "id": "C",
+    "content": "一時的"
+  }, {
+    "id": "D",
+    "content": "一方的"
+  }],
+  "answer": "B",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+} 

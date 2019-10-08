@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>年终总结的各种方式</title>
+  <link rel="stylesheet" type="text/css" href="../css/posts/2016-12-30.css">
+</head>
+<body>
+
+<div class="container">
+  <div id="main"></div>
+</div>
+
+<script type="text/javascript" src="../../libs/jquery.min.js"></script>
+<script type="text/javascript" src="../../libs/typed.min.js"></script>
+
+<script type="text/javascript" src="../js/2016-12-30.js"></script>
+
+<script type="text/javascript">
+  (function($) {
+    function print() {
+      var scrollRobot = startInterval()
+      $('#main').typed({
+        strings: [blog],
+        contentType: 'html',
+        typeSpeed: 0,
+        callback: function() {
+          clearInterval(scrollRobot)
+        }
+      })
+    }
+
+    function startInterval() {
+      return setInterval(function(){ window.scrollTo(0, document.body.scrollHeight); }, 1000)
+    }
+
+    $(document).ready(function() {
+      print()
+    })
+  })(jQuery)
+</script>
+</body>
+</html>

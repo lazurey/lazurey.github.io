@@ -1,0 +1,9 @@
+{
+  "rootDir": "./src",
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "testMatch": null,
+  "testRegex": "(/__test__/.*|(\\.|/)(test|spec))\\.tsx?$",
+  "collectCoverage": true,
+  "coverageDirectory": "<rootDir>/coverage-reports"
+}

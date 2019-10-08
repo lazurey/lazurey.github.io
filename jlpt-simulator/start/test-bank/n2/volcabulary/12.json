@@ -1,0 +1,22 @@
+{
+  "stem": "万一の場合に（ 　）毎月貯金する。",
+  "options": [{
+    "id": "A",
+    "content": "押さえて"
+  }, {
+    "id": "B",
+    "content": "防いで"
+  }, {
+    "id": "C",
+    "content": "捕まえて"
+  }, {
+    "id": "D",
+    "content": "備えて"
+  }],
+  "answer": "D",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+} 

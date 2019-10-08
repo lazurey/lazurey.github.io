@@ -1,0 +1,22 @@
+{
+  "stem": "その資料は読み終わり（　　）、受付に返してください。",
+  "options": [{
+    "id": "A",
+    "content": "後で"
+  }, {
+    "id": "B",
+    "content": "以降"
+  }, {
+    "id": "C",
+    "content": "結果"
+  }, {
+    "id": "D",
+    "content": "次第"
+  }],
+  "answer": "D",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

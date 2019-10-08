@@ -1,0 +1,22 @@
+{
+  "stem": "翻訳の仕事を<u>安易</u>に引き受けて、後悔している。",
+  "options": [{
+    "id": "A",
+    "content": "やすい"
+  }, {
+    "id": "B",
+    "content": "やすぎ"
+  }, {
+    "id": "C",
+    "content": "あんい"
+  }, {
+    "id": "D",
+    "content": "あんさ"
+  }],
+  "answer": "C",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

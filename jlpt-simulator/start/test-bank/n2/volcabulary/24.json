@@ -1,0 +1,22 @@
+{
+  "stem": "彼女はペットに沢山の愛情を（ 　）いる。",
+  "options": [{
+    "id": "A",
+    "content": "つないで"
+  }, {
+    "id": "B",
+    "content": "くっついて"
+  }, {
+    "id": "C",
+    "content": "傾いて"
+  }, {
+    "id": "D",
+    "content": "注いで"
+  }],
+  "answer": "D",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+} 

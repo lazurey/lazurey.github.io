@@ -1,0 +1,22 @@
+{
+  "stem": "五十音図は五十音ではなく、いくつかの<u>重複</u>がある。",
+  "options": [{
+    "id": "A",
+    "content": "しゅうふく"
+  }, {
+    "id": "B",
+    "content": "じゅうぶく"
+  }, {
+    "id": "C",
+    "content": "ちょうふく"
+  }, {
+    "id": "D",
+    "content": "ちょうぶく"
+  }],
+  "answer": "C",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

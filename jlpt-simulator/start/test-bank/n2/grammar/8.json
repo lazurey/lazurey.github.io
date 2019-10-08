@@ -1,0 +1,22 @@
+{
+  "stem": "私は海外旅行（　　）、国内旅行もめったに行かない。",
+  "options": [{
+    "id": "A",
+    "content": "どころか"
+  }, {
+    "id": "B",
+    "content": "ばかりか"
+  }, {
+    "id": "C",
+    "content": "ところが"
+  }, {
+    "id": "D",
+    "content": "ばかりが"
+  }],
+  "answer": "A",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

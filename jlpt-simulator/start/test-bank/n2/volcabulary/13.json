@@ -1,0 +1,22 @@
+{
+  "stem": "心を（ 　）作った料理はおいしい。",
+  "options": [{
+    "id": "A",
+    "content": "いれて"
+  }, {
+    "id": "B",
+    "content": "こめて"
+  }, {
+    "id": "C",
+    "content": "つけて"
+  }, {
+    "id": "D",
+    "content": "つめて"
+  }],
+  "answer": "B",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+} 

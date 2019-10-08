@@ -1,0 +1,22 @@
+{
+  "stem": "三人のうち、店長に（ 　）のは加藤さんだと思う。",
+  "options": [{
+    "id": "A",
+    "content": "頼りない"
+  }, {
+    "id": "B",
+    "content": "ふさわしい"
+  }, {
+    "id": "C",
+    "content": "すまない"
+  }, {
+    "id": "D",
+    "content": "力強い"
+  }],
+  "answer": "B",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+} 

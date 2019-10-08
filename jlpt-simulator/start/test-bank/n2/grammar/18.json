@@ -1,0 +1,22 @@
+{
+  "stem": "自分一人でやると言った以上（　　）、最後まで一人で頑張らないといけない。",
+  "options": [{
+    "id": "A",
+    "content": "は"
+  }, {
+    "id": "B",
+    "content": "に"
+  }, {
+    "id": "C",
+    "content": "が"
+  }, {
+    "id": "D",
+    "content": "で"
+  }],
+  "answer": "A",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

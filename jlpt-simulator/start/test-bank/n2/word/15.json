@@ -1,0 +1,22 @@
+{
+  "stem": "新幹線の運行に<u>影響</u>はなかった。",
+  "options": [{
+    "id": "A",
+    "content": "えいきゅ"
+  }, {
+    "id": "B",
+    "content": "えいきゅう"
+  }, {
+    "id": "C",
+    "content": "えいきょ"
+  }, {
+    "id": "D",
+    "content": "えいきょう"
+  }],
+  "answer": "D",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

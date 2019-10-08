@@ -1,0 +1,22 @@
+{
+  "stem": "性別や年齢など（　　）、優秀な人才を募集する。",
+  "options": [{
+    "id": "A",
+    "content": "はとわず"
+  }, {
+    "id": "B",
+    "content": "はおろか"
+  }, {
+    "id": "C",
+    "content": "はべつとして"
+  }, {
+    "id": "D",
+    "content": "はもとより"
+  }],
+  "answer": "A",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

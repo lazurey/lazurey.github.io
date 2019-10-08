@@ -1,0 +1,342 @@
+body {
+  margin: 0;
+  background-color: #3FC7D3;
+  font-family: Optima, "Open Sans", "Microsoft YaHei", "黑体", "SimHei", "STHeiti", "宋体", sans-serif;
+  font-size: 16px;
+  line-height: 1.4em;
+  position: relative;
+  color: #778;
+}
+
+a {
+  color: #3FC7D3;
+}
+
+ul, ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul.styled, ul.styled li {
+  list-style: lower-roman;
+  margin-bottom: 5px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  color: #666;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+h1 small {
+  font-size: 0.5em;
+}
+
+.container {
+  width: 680px;
+  margin: 0 auto;
+  max-width: 100%;
+  position: relative;
+  min-height: 100vh;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #000;
+}
+
+.layer {
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 1000;
+}
+
+.layer .container {
+  box-sizing: border-box;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.layer header {
+  max-height: 320px;
+  position: relative;
+  overflow: hidden;
+}
+
+.layer header img {
+  top: -100px;
+  position: relative;
+  width: 100%;
+}
+
+.layer h3 {
+  font-size: 2.6em;
+  box-sizing: border-box;
+  padding: 0 40px;
+}
+
+.layer__table h3, .layer__table .container > h4 {
+  padding: 0 10px;
+}
+
+.layer__table h4 {
+  font-size: 1.8em;
+  margin: 10px 0;
+}
+
+.layer .return {
+  position: absolute;
+  border-radius: 100%;
+  background: rgba(69, 199, 201, 0.6);
+  color: rgba(255, 255, 255, 0.6);
+  width: 60px;
+  height: 60px;
+  top: 20px;
+  right: 20px;
+  line-height: 60px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.layer .return:hover {
+  background: rgba(69, 199, 201, 0.9);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.main {
+  display: none;
+  padding: 40px;
+}
+
+.main.main__active {
+  display: block;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 0.8em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.copyright a {
+  color: rgba(255, 255, 255, 0.5); 
+}
+
+.sns-links {
+  display: flex;
+}
+
+.sns-links li {
+  padding: 10px;
+}
+
+.sns-links li img {
+  max-width: 100%;
+  width: 36px;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+
+.sns-links li:hover img {
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+  -webkit-filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.menu > li {
+  height: 200px;
+  box-sizing: border-box;
+  width: 50%;
+  border-radius: 16px;
+  overflow: hidden;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 40px;
+  transition: all .3s ease-in-out;
+}
+
+.menu > li a {
+  color: #fefefe;
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.menu > li i {
+  color: #fefefe;
+  font-size: 1.1em;
+}
+
+.menu > li .title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  padding: 10px 0 10px 40px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.menu--skill {
+  background: url('../images/skill.png') center bottom no-repeat #00C6B1;
+  left: -20px;
+  padding-left: 20px;
+}
+
+.menu--skill .title {
+  background-color: #F9BB3E;
+}
+
+.layer--skill {
+  background: #F9BB3E;
+}
+
+.menu--lang {
+  background: url('../images/language.png') center no-repeat #00C6B1;
+  right: -20px;
+  padding-right: 20px;
+}
+
+.menu--lang .title {
+  background-color: #93E872;  
+}
+
+.layer--lang {
+  background: #93E872;
+}
+
+.menu--ex {
+  background: url('../images/experience.png') center bottom no-repeat #00C6B1;
+  left: -20px;
+  padding-left: 20px;
+}
+
+.menu--ex .title {
+  background-color: #43DAE2;  
+}
+
+.layer--ex {
+  background: #43DAE2;
+}
+
+.menu--edu {
+  background: url('../images/education.png') center no-repeat #00C6B1;
+  right: -20px;
+  padding-right: 20px;
+}
+
+.menu--edu .title {
+  background-color: #D06FF3;  
+}
+
+.layer--edu {
+  background: #D06FF3;
+}
+
+.menu--skill:hover, .menu--ex:hover {
+  left: 10px;
+}
+
+.menu--lang:hover, .menu--edu:hover {
+  right: 10px;
+}
+
+.skill-list {
+  padding: 0 40px;
+  margin: 20px 0;
+}
+
+.skill-list .name {
+  width: 40%;
+  display: inline-block;
+  font-family: monospace;
+}
+
+.skill-list li {
+  padding: 5px 0;
+}
+
+.skill-list .title {
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.skill-list i {
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0 5px;
+  color: #3B240E;
+}
+.experience {
+  font-size: 0.9em;
+  width: 95%;
+  margin: 0 auto;
+}
+.experience h3 {
+  font-size: 1.1em;
+  color: #333;
+  padding: 0;
+  margin: 0;
+}
+.experience .time {
+  width: 30%;
+  vertical-align: top;
+}
+
+@media screen and (max-width: 500px) {
+  .menu > li a {
+    letter-spacing: 0;
+  }
+
+  .layer header img {
+    top: 0;
+  }
+
+  .skill-list .name {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .skill-list .level {
+    display: block;
+    text-align: right;
+    margin-bottom: 10px;
+  }
+
+  .menu--skill, .menu--ex {
+    left: -10px;
+    padding-left: 10px;
+  }
+
+  .menu--lang, .menu--edu {
+    right: -10px;
+    padding-right: 10px; 
+  }
+
+  .menu > li .title {
+    padding: 10px;
+  }
+}

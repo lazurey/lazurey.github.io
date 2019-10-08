@@ -1,0 +1,22 @@
+{
+  "stem": "新幹線自動券売機の一部にシステムの不具合が生じ、切符が<u>購入</u>ができない状態になった。",
+  "options": [{
+    "id": "A",
+    "content": "こにゅう"
+  }, {
+    "id": "B",
+    "content": "こうにゅう"
+  }, {
+    "id": "C",
+    "content": "こにょう"
+  }, {
+    "id": "D",
+    "content": "こうにょう"
+  }],
+  "answer": "B",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

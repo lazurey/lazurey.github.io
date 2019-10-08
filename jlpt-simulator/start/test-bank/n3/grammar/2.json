@@ -1,0 +1,22 @@
+{
+  "stem": "田中さんは選手を引退した後、監督（　　）してサッカー界で活躍している。",
+  "options": [{
+    "id": "A",
+    "content": "で"
+  }, {
+    "id": "B",
+    "content": "に"
+  }, {
+    "id": "C",
+    "content": "と"
+  }, {
+    "id": "D",
+    "content": "を"
+  }],
+  "answer": "C",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

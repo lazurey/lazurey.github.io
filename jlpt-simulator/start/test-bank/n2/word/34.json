@@ -1,0 +1,22 @@
+{
+  "stem": "経営不振で、会社は多額の<u>負債</u>を抱えている。",
+  "options": [{
+    "id": "A",
+    "content": "ふざい"
+  }, {
+    "id": "B",
+    "content": "ふうさい"
+  }, {
+    "id": "C",
+    "content": "ふうざい"
+  }, {
+    "id": "D",
+    "content": "ふさい"
+  }],
+  "answer": "D",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

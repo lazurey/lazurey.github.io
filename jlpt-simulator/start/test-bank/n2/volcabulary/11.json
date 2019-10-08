@@ -1,0 +1,22 @@
+{
+  "stem": "うちの（ 　）服は入り口が狭くて、駐車が大変だ。",
+  "options": [{
+    "id": "A",
+    "content": "カウンター"
+  }, {
+    "id": "B",
+    "content": "エンジン"
+  }, {
+    "id": "C",
+    "content": "ガレージ"
+  }, {
+    "id": "D",
+    "content": "ステージ"
+  }],
+  "answer": "C",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+} 

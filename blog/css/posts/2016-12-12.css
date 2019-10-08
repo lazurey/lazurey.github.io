@@ -1,0 +1,71 @@
+body {
+  background: #33455A;
+  color: #F5F6F0;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: "Open Sans", "Microsoft YaHei", "Hiragino Sans GB", "黑体", "SimHei", "STHeiti", "宋体", sans-serif;
+}
+
+a {
+  color: #8B9492;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover, a:active {
+  color: #F5F6F0;
+}
+
+main {
+  width: 960px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+#book-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.book-label {
+  width: 100%;
+  line-height: 40px;
+  font-size: 1.4em;
+  color: rgba(245, 245, 245, 0.6);
+}
+
+.book-item {
+  list-style: none;
+  max-width: 100%;
+  padding: 15px;
+  text-align: center;
+}
+
+.book-title {
+  font-size: 1.1em;
+  padding-top: 10px;
+  display: block;
+}
+
+.book-img {
+  display: block;
+  margin: 0 auto;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+  width: 150px;
+  height: 210px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(245, 245, 245, 0.5);
+  transition: box-shadow 0.3s;
+}
+
+.book-item:hover .book-title {
+  color: #F5F6F0;
+}
+
+.book-item:hover .book-img, .book-img:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+}

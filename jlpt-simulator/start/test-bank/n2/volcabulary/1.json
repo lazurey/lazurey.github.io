@@ -1,0 +1,22 @@
+{
+  "stem": "この国の（ ）産業は農業で、とくに米作りがさかんです。",
+  "options": [{
+    "id": "A",
+    "content": "おもな"
+  }, {
+    "id": "B",
+    "content": "らくな"
+  }, {
+    "id": "C",
+    "content": "むだな"
+  }, {
+    "id": "D",
+    "content": "あれな"
+  }],
+  "answer": "A",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

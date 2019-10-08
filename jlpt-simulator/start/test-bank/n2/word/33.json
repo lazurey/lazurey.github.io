@@ -1,0 +1,22 @@
+{
+  "stem": "停電は数時間後にようやく<u>復旧</u>した。",
+  "options": [{
+    "id": "A",
+    "content": "ふくきゅう"
+  }, {
+    "id": "B",
+    "content": "ふくきゅ"
+  }, {
+    "id": "C",
+    "content": "ふっきゅう"
+  }, {
+    "id": "D",
+    "content": "ふっきゅ"
+  }],
+  "answer": "C",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "stem": "これらの経費は<u>除いて</u>計算してください。",
+  "options": [{
+    "id": "A",
+    "content": "のぞいて"
+  }, {
+    "id": "B",
+    "content": "はぶいて"
+  }, {
+    "id": "C",
+    "content": "ぬいて"
+  }, {
+    "id": "D",
+    "content": "ひいて"
+  }],
+  "answer": "A",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

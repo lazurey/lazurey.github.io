@@ -1,0 +1,22 @@
+{
+  "stem": "彼のスピーチは大きな<u>喝采</u>を浴びた。",
+  "options": [{
+    "id": "A",
+    "content": "かつさい"
+  }, {
+    "id": "B",
+    "content": "かっさい"
+  }, {
+    "id": "C",
+    "content": "かつさい"
+  }, {
+    "id": "D",
+    "content": "かつさい"
+  }],
+  "answer": "B",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "stem": "今度の打ちあわせは土曜日です。（  ）、時間は後ほどお伝えします。",
+  "options": [{
+    "id": "A",
+    "content": "それでも"
+  }, {
+    "id": "B",
+    "content": " なお"
+  }, {
+    "id": "C",
+    "content": "さらに"
+  }, {
+    "id": "D",
+    "content": "むしろ"
+  }],
+  "answer": "B",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

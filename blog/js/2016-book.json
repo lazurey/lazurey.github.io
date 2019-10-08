@@ -1,0 +1,113 @@
+{
+  "data": [
+    {
+      "category": "history",
+      "display_name": "甲骨文丛书 ◊ Mirror系列 ◊ 历史",
+      "items": [
+        {
+          "name": "海洋帝国",
+          "image": "s28342679",
+          "book_id": "25891321"
+        },
+        {
+          "name": "1453：君士坦丁堡之战",
+          "image": "s28039740",
+          "book_id": "25891318"
+        },
+        {
+          "name": "阿拉伯的劳伦斯",
+          "image": "s27435757",
+          "book_id": "25883305"
+        },
+        {
+          "name": "天国之秋",
+          "image": "s28386971",
+          "book_id": "25938605"
+        },
+        {
+          "name": "布达佩斯往事",
+          "image": "s28425500",
+          "book_id": "26606366"
+        },
+        {
+          "name": "巨人的陨落",
+          "image": "s28668834",
+          "book_id": "26698660"
+        },
+        {
+          "name": "再度觉醒",
+          "image": "s28333384",
+          "book_id": "26657740"
+        },
+        {
+          "name": "给曾国藩算算账",
+          "image": "s27996774",
+          "book_id": "26307733"
+        }
+      ]
+    },
+    {
+      "category": "literature",
+      "display_name": "科幻 ◊ 文学作品",
+      "items": [
+        {
+          "name": "高城堡里的人",
+          "image": "s26858989",
+          "book_id": "22606919"
+        },
+        {
+          "name": "少数派报告",
+          "image": "s26858997",
+          "book_id": "24715669"
+        },
+        {
+          "name": "所有悲伤的年轻人",
+          "image": "s28482466",
+          "book_id": "26729967"
+        },
+        {
+          "name": "斯通纳",
+          "image": "s28332051",
+          "book_id": "26425831"
+        }
+      ]
+    },
+    {
+      "category": "technology",
+      "display_name": "实用技术",
+      "items": [
+        {
+          "name": "Gamestorming",
+          "image": "s8495868",
+          "book_id": "10047423"
+        },
+        {
+          "name": "凤凰项目：一个IT运维的传奇故事",
+          "image": "s28319421",
+          "book_id": "26644070"
+        },
+        {
+          "name": "世界上最简单的会计书",
+          "image": "s28040378",
+          "book_id": "25747852"
+        }
+      ]
+    },
+    {
+      "category": "others",
+      "display_name": "有奇怪的东西混进来了",
+      "items": [
+        {
+          "name": "那些古怪又让人忧心的问题",
+          "image": "s28051567",
+          "book_id": "26364209"
+        },
+        {
+          "name": "你今天真好看",
+          "image": "s28369176",
+          "book_id": "26602392"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "stem": "給料も（　　）、休みも多い。そんな仕事はどこにもないだろう",
+  "options": [{
+    "id": "A",
+    "content": "高くないと"
+  }, {
+    "id": "B",
+    "content": "高ければ"
+  }, {
+    "id": "C",
+    "content": "高くなければ"
+  }, {
+    "id": "D",
+    "content": "高かったら"
+  }],
+  "answer": "B",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+.post {
+  min-width: 320px;
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  display: flex;
+  height: 80vh;
+  padding: 40px 20px;
+}
+
+.cover, .content {
+
+}
+
+.cover {
+  width: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content {
+  overflow-y: scroll;
+  padding: 0 20px;
+  width: 50%; 
+}
+
+.content h2 {
+  padding: 60px 0 20px 0;
+  text-align: right;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}

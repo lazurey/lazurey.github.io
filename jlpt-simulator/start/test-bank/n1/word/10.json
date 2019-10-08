@@ -1,0 +1,22 @@
+{
+  "stem": "この店は、今月に入って、客数が<u>極端</u>に減ったらしい。",
+  "options": [{
+    "id": "A",
+    "content": "きょたん"
+  }, {
+    "id": "B",
+    "content": "きょてん"
+  }, {
+    "id": "C",
+    "content": "きょくたん"
+  }, {
+    "id": "D",
+    "content": "きょくてん"
+  }],
+  "answer": "C",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

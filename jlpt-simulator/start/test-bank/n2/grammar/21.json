@@ -1,0 +1,22 @@
+{
+  "stem": "兄は親の期待（　　）、家業を継がず、公務員になった。",
+  "options": [{
+    "id": "A",
+    "content": "にさいして"
+  }, {
+    "id": "B",
+    "content": "にそなえて"
+  }, {
+    "id": "C",
+    "content": "にはんして"
+  }, {
+    "id": "D",
+    "content": "にそって"
+  }],
+  "answer": "C",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

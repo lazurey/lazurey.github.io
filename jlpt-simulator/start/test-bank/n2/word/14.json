@@ -1,0 +1,22 @@
+{
+  "stem": "このサイトの品物は本物かどうか<u>怪しい</u>。",
+  "options": [{
+    "id": "A",
+    "content": "あやしい"
+  }, {
+    "id": "B",
+    "content": "くやしい"
+  }, {
+    "id": "C",
+    "content": "むなしい"
+  }, {
+    "id": "D",
+    "content": "うつくしい"
+  }],
+  "answer": "A",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

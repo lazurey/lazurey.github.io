@@ -1,0 +1,68 @@
+$purple: #ab4bab;
+$blue:   #0099cc;
+
+$light-purple: #948dd6;
+$light-blue: #b4edf6;
+$light-red: #eaa6bd;
+
+$dark-blue: #45839f;
+$dark-green: #6e8a8e;
+
+$bg-black: #1C252E;
+
+// Lengths
+$box1-length: 600px;
+$box2-length: $box1-length * 0.9;
+$box3-length: $box2-length * 0.85;
+$box4-length: $box3-length * 0.9;
+$box5-length: $box4-length * 0.9;
+$box6-length: $box5-length * 0.92;
+$box7-length: $box6-length - 8;
+$box8-length: $box7-length * 0.92;
+$box9-length: $box8-length - 16;
+
+$box10-length: $box9-length * 0.9;
+$box11-length: $box10-length * 0.9;
+$box12-length: $box11-length - 12;
+$box13-length: $box12-length - 8;
+$box14-length: $box13-length - 28;
+$box15-length: $box14-length - 12;
+$box16-length: $box15-length - 8;
+$box17-length: $box16-length - 8;
+$box18-length: $box17-length - 16;
+$box19-length: $box18-length - (8 * 2) - (6 * 2);
+$box20-length: $box19-length - 6;
+$box21-length: $box20-length - 24;
+$box22-length: $box21-length - 8;
+$box23-length: $box22-length - 16;
+$box24-length: $box23-length - 8;
+$box25-length: $box24-length - 8;
+$box26-length: $box25-length - 24;
+
+// Margins
+$box2-margin: $box1-length * 0.1 / 2 - 8;
+$box3-margin: $box2-length * 0.15 / 2 - 16;
+$box4-margin: $box3-length * 0.1 / 2 - 4;
+$box5-margin: $box4-length * 0.1 / 2 - 4;
+$box6-margin: $box5-length * 0.08 / 2 - 4;
+$box7-margin: 0;
+$box8-margin: $box7-length * 0.08 / 2 - 4;
+$box9-margin: 0;
+
+$box10-margin: $box9-length * 0.1 / 2 - 2;
+$box11-margin: $box10-length * 0.1 / 2 - 4;
+$box12-margin: 0;
+$box13-margin: 0;
+$box14-margin: 8px;
+$box15-margin: 0;
+$box16-margin: -4px;
+$box17-margin: 0;
+$box18-margin: 4px;
+$box19-margin: 8px;
+$box20-margin: -3px;
+$box21-margin: 0;
+$box22-margin: 0;
+$box23-margin: 0;
+$box24-margin: 0;
+$box25-margin: 0;
+$box26-margin: 0;

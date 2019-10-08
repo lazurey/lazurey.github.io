@@ -1,0 +1,22 @@
+{
+  "stem": "この結果はどのくらい<u>継続</u>するのだろう。",
+  "options": [{
+    "id": "A",
+    "content": "じぞく"
+  }, {
+    "id": "B",
+    "content": "けいぞく"
+  }, {
+    "id": "C",
+    "content": "じそく"
+  }, {
+    "id": "D",
+    "content": "けいそく"
+  }],
+  "answer": "B",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

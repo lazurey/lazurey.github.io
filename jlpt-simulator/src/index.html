@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="JLPT test exam 日本語能力 日语能力考试 文字语法模拟器">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <style type="text/css">
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #EAEFF5;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <style type="text/css">
+      .c {
+        width: 400px;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        height: 88vh;
+        max-width: 100%;
+        justify-content: center;
+        color: rgba(74,210,147, 0.96);
+      }
+      @keyframes shrinking {
+        0% {
+          width: 400px;
+          height: 400px;
+          opacity: 0.1;
+        }
+        100% {
+          width: 100px;
+          height: 100px;
+          opacity: 1;
+        }
+      }
+      .circle {
+        animation: shrinking .5s 1 ease-out;
+        border-radius: 100%;
+        width: 100px;
+        height: 100px;
+        border: 4.88px solid rgba(74,210,147, 0.96);
+        box-shadow: 0 0 16.86px rgba(74,210,147, 0.66);
+        line-height: 80px;
+      }
+      .dot {
+        width: 5px;
+        height: 5px;
+        display: inline-block;
+        background-color: rgba(74,210,147, 0.96);
+        opacity: 0;
+        border-radius: 100%;
+        animation-delay: .8s;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-out;
+      }
+      @keyframes loadingOne {
+        0% {
+          opacity: 0;
+        }
+
+        25% {
+          opacity: 1;
+        }
+
+        75% {
+          opacity: 1;
+        }
+
+        100% {
+          opacity: 0;
+        }
+      }
+      .dot-1 {
+        animation-name: loadingOne;
+      }
+
+      @keyframes loadingTwo {
+        25% {
+          opacity: 0;
+        }
+
+        50% {
+          opacity: 1;
+        }
+
+        75% {
+          opacity: 1;
+        }
+
+        100% {
+          opacity: 0;
+        }
+      }
+      .dot-2 {
+        animation-name: loadingTwo;
+      }
+      @keyframes loadingThree {
+        0% {
+          opacity: 0;
+        }
+
+        50% {
+          opacity: 0;
+        }
+
+        75% {
+          opacity: 1;
+        }
+
+        100% {
+          opacity: 0;
+        }
+      }
+      .dot-3 {
+        animation-name: loadingThree;
+      }
+    </style>
+    <div class="c">
+      <div class="circle">
+        <span class="dot dot-1"></span>
+        <span class="dot dot-2"></span>
+        <span class="dot dot-3"></span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

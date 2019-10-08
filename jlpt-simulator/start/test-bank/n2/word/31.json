@@ -1,0 +1,22 @@
+{
+  "stem": "息子は週に一回<u>空手</u>教室に通っている。",
+  "options": [{
+    "id": "A",
+    "content": "からて"
+  }, {
+    "id": "B",
+    "content": "からで"
+  }, {
+    "id": "C",
+    "content": "くうしゅ"
+  }, {
+    "id": "D",
+    "content": "あきて"
+  }],
+  "answer": "A",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

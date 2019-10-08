@@ -1,0 +1,22 @@
+{
+  "stem": "「佐藤武と申します。和田先生に（　　）たいんですが。",
+  "options": [{
+    "id": "A",
+    "content": "参り"
+  }, {
+    "id": "B",
+    "content": "お目にかけ"
+  }, {
+    "id": "C",
+    "content": "お目にかかり"
+  }, {
+    "id": "D",
+    "content": "拝見"
+  }],
+  "answer": "C",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

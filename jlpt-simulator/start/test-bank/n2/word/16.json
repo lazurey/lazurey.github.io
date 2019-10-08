@@ -1,0 +1,22 @@
+{
+  "stem": "20日から　ドコモ、中古品のSIMロック<u>解除</u>を開始。",
+  "options": [{
+    "id": "A",
+    "content": "かいじょ"
+  }, {
+    "id": "B",
+    "content": "かいじょう"
+  }, {
+    "id": "C",
+    "content": "とかい"
+  }, {
+    "id": "D",
+    "content": "とうかい"
+  }],
+  "answer": "A",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

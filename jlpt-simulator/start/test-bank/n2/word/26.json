@@ -1,0 +1,22 @@
+{
+  "stem": "長年の研究が実って、<u>偉大</u>な発明をした。",
+  "options": [{
+    "id": "A",
+    "content": "いたい"
+  }, {
+    "id": "B",
+    "content": "いだい"
+  }, {
+    "id": "C",
+    "content": "えらたい"
+  }, {
+    "id": "D",
+    "content": "えらだい"
+  }],
+  "answer": "B",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

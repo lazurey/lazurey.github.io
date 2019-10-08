@@ -1,0 +1,31 @@
+.demo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    width: 33.3%;
+    box-sizing: border-box;
+    padding: 40px 20px;
+    &:nth-child(1) {
+      background: #0C0C0C;
+      color: #fff;
+    }
+    &:nth-child(2) {
+      background: #4F4F48;
+      color: #fff;
+    }
+    &:nth-child(3) {
+      background: #8F77B5;
+      color: #fff;
+    }
+    &:nth-child(4) {
+      background: #BF6766;
+      color: #fff;
+    }
+  }
+
+}

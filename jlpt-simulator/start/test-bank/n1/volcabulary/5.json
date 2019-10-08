@@ -1,0 +1,22 @@
+{
+  "stem": "転ばないように（ ）に気をつけてください。",
+  "options": [{
+    "id": "A",
+    "content": "足元"
+  }, {
+    "id": "B",
+    "content": "足早"
+  }, {
+    "id": "C",
+    "content": "足跡"
+  }, {
+    "id": "D",
+    "content": "足音"
+  }],
+  "answer": "A",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "stem": "佐藤さんの（　　）、パーティーは大成功に終わった。",
+  "options": [{
+    "id": "A",
+    "content": "次第で"
+  }, {
+    "id": "B",
+    "content": "きっかけで"
+  }, {
+    "id": "C",
+    "content": "おかげで"
+  }, {
+    "id": "D",
+    "content": "くせに"
+  }],
+  "answer": "C",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

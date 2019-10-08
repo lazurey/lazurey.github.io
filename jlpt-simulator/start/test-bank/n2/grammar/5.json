@@ -1,0 +1,22 @@
+{
+  "stem": "たとえお金がなくて困って（　　）、そんな仕事はしたくない。",
+  "options": [{
+    "id": "A",
+    "content": "いても"
+  }, {
+    "id": "B",
+    "content": "いるのに"
+  }, {
+    "id": "C",
+    "content": "いるなら"
+  }, {
+    "id": "D",
+    "content": "いれば"
+  }],
+  "answer": "A",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

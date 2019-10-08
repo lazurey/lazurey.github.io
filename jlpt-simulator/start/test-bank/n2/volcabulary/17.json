@@ -1,0 +1,22 @@
+{
+  "stem": "引っ越し業者に（ 　）を出してもらった。",
+  "options": [{
+    "id": "A",
+    "content": "見積もり"
+  }, {
+    "id": "B",
+    "content": "算数"
+  }, {
+    "id": "C",
+    "content": "注文"
+  }, {
+    "id": "D",
+    "content": "見合い"
+  }],
+  "answer": "A",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+} 

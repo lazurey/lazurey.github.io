@@ -1,0 +1,22 @@
+{
+  "stem": "無断欠勤した部下を（ 　）に注意した。",
+  "options": [{
+    "id": "A",
+    "content": "冷静"
+  }, {
+    "id": "B",
+    "content": "深刻"
+  }, {
+    "id": "C",
+    "content": "残酷"
+  }, {
+    "id": "D",
+    "content": "厳重"
+  }],
+  "answer": "D",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+} 

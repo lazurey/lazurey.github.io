@@ -1,0 +1,22 @@
+{
+  "stem": "これは薬を飲み（　　）すぐ治る病気ではない。手術が必要だ。",
+  "options": [{
+    "id": "A",
+    "content": "さえあれば"
+  }, {
+    "id": "B",
+    "content": "さえすれば"
+  }, {
+    "id": "C",
+    "content": "こそあれば"
+  }, {
+    "id": "D",
+    "content": "こそすれば"
+  }],
+  "answer": "B",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

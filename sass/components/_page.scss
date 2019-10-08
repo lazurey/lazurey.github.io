@@ -1,0 +1,88 @@
+body {
+  background: $bg-black;
+  height: 100%;
+  width: 100%;
+  font-family: 'MF LangSong (Noncommercial)', Helvetica, Tahoma, Arial, 'STXihei', "华文细黑", "Microsoft YaHei", "微软雅黑", sans-serif;;
+}
+
+a {
+  color: $blue;
+}
+
+a.yeah {
+  position: relative;
+  display: inline-block;
+  perspective: 800px;
+  text-align: center;
+  span {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 0 5px;
+    background: transparent;
+    transition: transform 0.4s, background 0.4s;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50% -20px;
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      width: 100%;
+      height: 100%;
+      color: transparent;
+      background: transparent;
+      content: attr(data-hover);
+      transition: background 0.4s;
+      transform: rotateY(90deg);
+      transform-origin: 0 50%;
+      pointer-events: none;
+    }
+  }
+  &:hover {
+    span {
+      background: lighten($blue, 10%);
+      color: #fff;
+      transform: rotateY(-90deg);
+      &:before {
+        background: lighten($blue, 10%);
+        color: #fff;
+      }
+    }
+  }
+  
+}
+
+.nav-container {
+  z-index: 10;
+}
+
+.container {
+  width: 620px;
+  margin: 40px auto;
+  height: 620px;
+  z-index: 9;
+}
+
+.header {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  h1 {
+    font-size: 300px;
+    line-height: 300px;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+  }
+  p {
+    font-size: 2em;
+    text-align: right;
+    padding-right: 20px;
+    margin: 0;
+  }
+  .hide {
+    color: $bg-black;
+    float: right;
+  }
+}

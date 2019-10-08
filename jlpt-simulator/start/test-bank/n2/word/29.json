@@ -1,0 +1,22 @@
+{
+  "stem": "この計画は理論的には可能だが、<u>実施</u>するのは無理だ。",
+  "options": [{
+    "id": "A",
+    "content": "じつし"
+  }, {
+    "id": "B",
+    "content": "じっし"
+  }, {
+    "id": "C",
+    "content": "しつじ"
+  }, {
+    "id": "D",
+    "content": "しっし"
+  }],
+  "answer": "B",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

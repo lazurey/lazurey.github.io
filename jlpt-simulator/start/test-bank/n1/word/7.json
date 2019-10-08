@@ -1,0 +1,22 @@
+{
+  "stem": "機械を使う<u>作業</u>なので、気をつけてください。",
+  "options": [{
+    "id": "A",
+    "content": "さぎょう"
+  }, {
+    "id": "B",
+    "content": "さくぎょう"
+  }, {
+    "id": "C",
+    "content": "さぎょ"
+  }, {
+    "id": "D",
+    "content": "さくぎょ"
+  }],
+  "answer": "A",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

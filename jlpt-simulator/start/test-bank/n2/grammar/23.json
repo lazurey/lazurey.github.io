@@ -1,0 +1,22 @@
+{
+  "stem": "留学して最初の（　　）、あまり日本語がと通じなかった。",
+  "options": [{
+    "id": "A",
+    "content": "うちで"
+  }, {
+    "id": "B",
+    "content": "うちに"
+  }, {
+    "id": "C",
+    "content": "うちを"
+  }, {
+    "id": "D",
+    "content": "うちは"
+  }],
+  "answer": "D",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "stem": "1台あたり最大4人を<u>相乗り</u>でミニバンが送迎してくれる。",
+  "options": [{
+    "id": "A",
+    "content": "あんのり"
+  }, {
+    "id": "B",
+    "content": "あいとり"
+  }, {
+    "id": "C",
+    "content": "あっとり"
+  }, {
+    "id": "D",
+    "content": "あいのり"
+  }],
+  "answer": "D",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

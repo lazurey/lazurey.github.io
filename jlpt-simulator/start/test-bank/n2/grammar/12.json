@@ -1,0 +1,22 @@
+{
+  "stem": "収入が増えていない（　　）、物価は上がるばかりで、節約術するしかない。",
+  "options": [{
+    "id": "A",
+    "content": "一方で"
+  }, {
+    "id": "B",
+    "content": "同時に"
+  }, {
+    "id": "C",
+    "content": "にしても"
+  }, {
+    "id": "D",
+    "content": "に至って"
+  }],
+  "answer": "A",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "stem": "子どものころ、生活は<u>豊か</u>ではなかったが幸せだった。",
+  "options": [{
+    "id": "A",
+    "content": "のどか"
+  }, {
+    "id": "B",
+    "content": "すこやか"
+  }, {
+    "id": "C",
+    "content": "ゆだか"
+  }, {
+    "id": "D",
+    "content": "ゆたか"
+  }],
+  "answer": "D",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

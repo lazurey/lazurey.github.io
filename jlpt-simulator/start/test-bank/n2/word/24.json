@@ -1,0 +1,22 @@
+{
+  "stem": "来月<u>下旬</u>に一時帰国する予定だ。",
+  "options": [{
+    "id": "A",
+    "content": "かじゅん"
+  }, {
+    "id": "B",
+    "content": "かしゅん"
+  }, {
+    "id": "C",
+    "content": "げじゅん"
+  }, {
+    "id": "D",
+    "content": "げしゅん"
+  }],
+  "answer": "C",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

@@ -1,0 +1,35 @@
+.nav-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 130px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-item {
+  position: relative;
+  > a {
+    padding: 40px 30px;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    display: block;
+    transition: all .3s;
+    text-align: center;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.8);
+      color: rgba(0, 0, 0, 0.8);
+    }
+  }
+  &.nav-item--bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}

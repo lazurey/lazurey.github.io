@@ -1,0 +1,22 @@
+{
+  "stem": "このお店は（ 　）な値段のランチメニューが人気だ。",
+  "options": [{
+    "id": "A",
+    "content": "手頃"
+  }, {
+    "id": "B",
+    "content": "手軽"
+  }, {
+    "id": "C",
+    "content": "明確"
+  }, {
+    "id": "D",
+    "content": "対等"
+  }],
+  "answer": "A",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+} 

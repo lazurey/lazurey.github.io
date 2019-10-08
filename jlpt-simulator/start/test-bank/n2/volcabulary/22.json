@@ -1,0 +1,22 @@
+{
+  "stem": "マラソン大会を前に、道路の（ 　）を行う。",
+  "options": [{
+    "id": "A",
+    "content": "整理"
+  }, {
+    "id": "B",
+    "content": "整備"
+  }, {
+    "id": "C",
+    "content": "整頓"
+  }, {
+    "id": "D",
+    "content": "整数"
+  }],
+  "answer": "B",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+} 

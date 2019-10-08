@@ -1,0 +1,16 @@
+body {
+  background: #33455A;
+  color: #F5F6F0;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: "Open Sans", "Microsoft YaHei", "Hiragino Sans GB", "黑体", "SimHei", "STHeiti", "宋体", sans-serif;
+}
+
+.main {
+
+}
+
+.feature-image {
+  max-width: 100%;
+  width: 400px;
+}

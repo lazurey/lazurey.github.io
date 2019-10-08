@@ -1,0 +1,22 @@
+{
+  "stem": "スピーチが終わると、会場から（  ）が起こった。",
+  "options": [{
+    "id": "A",
+    "content": "拍手"
+  }, {
+    "id": "B",
+    "content": "握手"
+  }, {
+    "id": "C",
+    "content": "応援"
+  }, {
+    "id": "D",
+    "content": "理解"
+  }],
+  "answer": "A",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

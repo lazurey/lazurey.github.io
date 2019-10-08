@@ -1,0 +1,22 @@
+{
+  "stem": "彼は僕のことを（ 　）だと思っているみたい。",
+  "options": [{
+    "id": "A",
+    "content": "アシスタント"
+  }, {
+    "id": "B",
+    "content": "システム"
+  }, {
+    "id": "C",
+    "content": "スタイル"
+  }, {
+    "id": "D",
+    "content": "ライバル"
+  }],
+  "answer": "D",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+} 

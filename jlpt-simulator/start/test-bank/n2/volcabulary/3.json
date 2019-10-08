@@ -1,0 +1,22 @@
+{
+  "stem": "風邪がとても（ ）しているので、気をつけてください。",
+  "options": [{
+    "id": "A",
+    "content": "普及"
+  }, {
+    "id": "B",
+    "content": "流行"
+  }, {
+    "id": "C",
+    "content": "伝染"
+  }, {
+    "id": "D",
+    "content": "拡大"
+  }],
+  "answer": "B",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

@@ -1,0 +1,43 @@
+.fly-layer {
+  position: absolute;
+  background: rgba(255, 255, 255, 0);
+  left: -2000px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px 5px;
+  transition: background 1s, width 1s, height 1s, border-radius 1s;
+  overflow: hidden;
+  z-index: 1;
+  &.fly-layer--show {
+    transition: background 1s, width 1s, height 1s, border-radius 1s;
+    left: 130px;
+    border-radius: 0 50px;
+    top: 0;
+    background: rgba(255, 255, 255, 1);
+    display: block;
+    width: 360px;
+    height: 320px;
+    padding: 40px;
+  }
+
+  strike {
+    opacity: 0.5;
+  }
+}
+
+.show-layer-selected {
+  background-color: rgba(255, 255, 255, 1);
+  color: rgba(0, 0, 0, 1) !important;
+  padding-right: 29px;
+  border-right: 1px dashed rgba(0, 0, 0, 0.5);
+}
+
+.hide-layer {
+  position: absolute;
+  bottom: 40px;
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+  &:hover {
+    color: rgba(0, 0, 0, 1);
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "stem": "目を閉じで、ゆっくり<u>呼吸</u>をしてください。",
+  "options": [{
+    "id": "A",
+    "content": "こしゅう"
+  }, {
+    "id": "B",
+    "content": "こうしゅう"
+  }, {
+    "id": "C",
+    "content": "こきゅう"
+  }, {
+    "id": "D",
+    "content": "こうきゅう"
+  }],
+  "answer": "C",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

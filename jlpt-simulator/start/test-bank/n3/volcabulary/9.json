@@ -1,0 +1,22 @@
+{
+  "stem": "漢字を書くのは（　 ）だが、読むほうは問題ない。",
+  "options": [{
+    "id": "A",
+    "content": "得意"
+  }, {
+    "id": "B",
+    "content": "上手"
+  }, {
+    "id": "C",
+    "content": "苦手"
+  }, {
+    "id": "D",
+    "content": "敬意"
+  }],
+  "answer": "C",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

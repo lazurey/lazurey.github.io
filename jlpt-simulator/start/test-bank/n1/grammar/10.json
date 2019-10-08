@@ -1,0 +1,22 @@
+{
+  "stem": "友達と約束したから、風邪でもパーティーに行く（　　）。",
+  "options": [{
+    "id": "A",
+    "content": "だけだ"
+  }, {
+    "id": "B",
+    "content": "ままだ"
+  }, {
+    "id": "C",
+    "content": "しかない"
+  }, {
+    "id": "D",
+    "content": "しかたがない"
+  }],
+  "answer": "C",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

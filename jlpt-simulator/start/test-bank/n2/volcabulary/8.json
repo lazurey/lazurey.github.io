@@ -1,0 +1,22 @@
+{
+  "stem": "田中さんは毎回予習を（  ）やってくるまじめな学生だ。",
+  "options": [{
+    "id": "A",
+    "content": "ふたたび"
+  }, {
+    "id": "B",
+    "content": "ちゃんと"
+  }, {
+    "id": "C",
+    "content": "そんなに"
+  }, {
+    "id": "D",
+    "content": "かわりに"
+  }],
+  "answer": "B",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

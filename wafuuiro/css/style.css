@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  font-family: 'Tsukushi A Round Gothic', 'YuMincho', 'YuGothic', Arial;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.container {
+  width: 600px;
+  margin: 0 auto;
+
+}
+
+#color-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#color-list li {
+  padding: 40px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+h3 {
+  margin: 5px 0;
+  font-size: 2em;
+  font-weight: 200;
+}
+
+li .detail {
+  position: absolute;
+  right: -200px;
+  top: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.8);
+  transition: right 0.3s;
+  padding: 0 40px;
+  width: 300px;
+  text-transform: uppercase;
+}
+
+#color-list li:hover .detail {
+  right: 0;
+  transition: right 0.3s;
+}

@@ -1,0 +1,22 @@
+{
+  "stem": "花瓶が倒れて、水が<u>零れて</u>しまった。",
+  "options": [{
+    "id": "A",
+    "content": "やぶれて"
+  }, {
+    "id": "B",
+    "content": "こぼれて"
+  }, {
+    "id": "C",
+    "content": "あふれて"
+  }, {
+    "id": "D",
+    "content": "くずれて"
+  }],
+  "answer": "B",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

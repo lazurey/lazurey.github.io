@@ -1,0 +1,97 @@
+/*
+
+black: #1A1A1D;
+light-black: #1C1E22;
+red: #FC5C5D;
+dark-red: #D44D4E;
+light: #ECCECF;
+white: #FAF9F9;
+grey: #BBBCBE;
+
+*/
+
+body {
+  background: #1A1A1D;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "RooneySans-Regular", "Lucida Grande", "Lucida Sans Unicode", "Trebuchet MS", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #ECCECF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'PT Serif', Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.container {
+  width: 960px;
+  height: 560px;
+  max-width: 100%;
+  margin: 80px auto;
+  display: flex;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.container > section {
+  width: 50%;
+  height: 560px;
+  box-sizing: border-box;
+  color: #FAF9F9;
+  padding: 40px;
+}
+
+.cover {
+  background: #FC5C5D;
+}
+
+.cover h1 {
+  font-size: 4.6em;
+  font-weight: 500;
+  color: #1C1E22;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.content {
+  background: #1C1E22;
+}
+
+.poem {
+  overflow-y: scroll;
+  height: 480px;
+  line-height: 1.8em;
+  font-weight: 200;
+  color: #ECCECF;
+  font-size: 0.9em;
+}
+
+.poem label {
+  line-height: 40px;
+  color: #FAF9F9;
+  margin: 40px 0;
+  display: block;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+.poem label:before {
+  content: ' ';
+  width: 30px;
+  height: 2px;
+  display: block;
+  background-color: #FC5C5D;
+}
+
+.copyright {
+  font-size: 0.8em;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+.copyright a {
+  color: #D44D4E;
+}

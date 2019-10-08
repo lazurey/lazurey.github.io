@@ -1,0 +1,22 @@
+{
+  "stem": "一度本人に会って（　　）、どんな人か判断できない。",
+  "options": [{
+    "id": "A",
+    "content": "みては"
+  }, {
+    "id": "B",
+    "content": "みてはじめて"
+  }, {
+    "id": "C",
+    "content": "みるとなると"
+  }, {
+    "id": "D",
+    "content": "みないことには"
+  }],
+  "answer": "D",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

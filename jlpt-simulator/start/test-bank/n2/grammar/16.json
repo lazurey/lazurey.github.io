@@ -1,0 +1,22 @@
+{
+  "stem": "この漫画は国内（　　）、海外でも人気が高い。",
+  "options": [{
+    "id": "A",
+    "content": "のみならず"
+  }, {
+    "id": "B",
+    "content": "までもなく"
+  }, {
+    "id": "C",
+    "content": "のみでなく"
+  }, {
+    "id": "D",
+    "content": "まででなく"
+  }],
+  "answer": "A",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

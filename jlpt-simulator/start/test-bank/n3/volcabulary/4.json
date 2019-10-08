@@ -1,0 +1,22 @@
+{
+  "stem": "（ ）がこしょうして、車が動かなくなった。",
+  "options": [{
+    "id": "A",
+    "content": "エンジン "
+  }, {
+    "id": "B",
+    "content": "アンテナ"
+  }, {
+    "id": "C",
+    "content": "アクセント"
+  }, {
+    "id": "D",
+    "content": "オイル"
+  }],
+  "answer": "A",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

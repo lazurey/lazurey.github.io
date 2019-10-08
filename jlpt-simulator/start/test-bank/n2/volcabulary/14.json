@@ -1,0 +1,22 @@
+{
+  "stem": "新しいセーターを水洗いたら（ 　）しまった。",
+  "options": [{
+    "id": "A",
+    "content": "ちぢんで"
+  }, {
+    "id": "B",
+    "content": "ちぢめて"
+  }, {
+    "id": "C",
+    "content": "ちぢれて"
+  }, {
+    "id": "D",
+    "content": "ちぎって"
+  }],
+  "answer": "A",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+} 

@@ -1,0 +1,22 @@
+{
+  "stem": "A国とB国の間で盛んに<u>貿易</u>が行われている。",
+  "options": [{
+    "id": "A",
+    "content": "もうえき"
+  }, {
+    "id": "B",
+    "content": "ぼうえき"
+  }, {
+    "id": "C",
+    "content": "もうい"
+  }, {
+    "id": "D",
+    "content": "ぼうい"
+  }],
+  "answer": "B",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

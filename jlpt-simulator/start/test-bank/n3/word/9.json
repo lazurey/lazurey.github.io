@@ -1,0 +1,22 @@
+{
+  "stem": "父は朝公園を散歩するのを<u>日課</u>としている。",
+  "options": [{
+    "id": "A",
+    "content": "にちか"
+  }, {
+    "id": "B",
+    "content": "にっか"
+  }, {
+    "id": "C",
+    "content": "じつか"
+  }, {
+    "id": "D",
+    "content": "じっか"
+  }],
+  "answer": "B",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "stem": "声をかけられて（ 　）と、鈴木先輩が微笑んでいた。",
+  "options": [{
+    "id": "A",
+    "content": "見上げる"
+  }, {
+    "id": "B",
+    "content": "眺める"
+  }, {
+    "id": "C",
+    "content": "下を向く"
+  }, {
+    "id": "D",
+    "content": "振り向く"
+  }],
+  "answer": "D",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+} 

@@ -1,0 +1,22 @@
+{
+  "stem": "彼は　目立つことが好きで、いつも（ ）服を　着ている。",
+  "options": [{
+    "id": "A",
+    "content": "じみな"
+  }, {
+    "id": "B",
+    "content": "あらたな"
+  }, {
+    "id": "C",
+    "content": "のんきな"
+  }, {
+    "id": "D",
+    "content": "はでな"
+  }],
+  "answer": "D",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

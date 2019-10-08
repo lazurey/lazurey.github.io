@@ -1,0 +1,22 @@
+{
+  "stem": "先生の言い方（　　）、今度の試験はかなり難しそうだ。",
+  "options": [{
+    "id": "A",
+    "content": "かとおもって"
+  }, {
+    "id": "B",
+    "content": "からなって"
+  }, {
+    "id": "C",
+    "content": "からすると"
+  }, {
+    "id": "D",
+    "content": "からくると"
+  }],
+  "answer": "C",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

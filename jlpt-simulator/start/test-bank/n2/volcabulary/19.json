@@ -1,0 +1,22 @@
+{
+  "stem": "この提案は全員の合意を（ 　）のは難しい。",
+  "options": [{
+    "id": "A",
+    "content": "取り戻す"
+  }, {
+    "id": "B",
+    "content": "整える"
+  }, {
+    "id": "C",
+    "content": "取り付ける"
+  }, {
+    "id": "D",
+    "content": "達する"
+  }],
+  "answer": "C",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+} 

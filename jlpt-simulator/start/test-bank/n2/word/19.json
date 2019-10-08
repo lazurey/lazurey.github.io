@@ -1,0 +1,22 @@
+{
+  "stem": "車内環境の快適さやルート設定の<u>妥当性</u>など、サービスを検証していく。",
+  "options": [{
+    "id": "A",
+    "content": "ととうせい"
+  }, {
+    "id": "B",
+    "content": "どうとせい"
+  }, {
+    "id": "C",
+    "content": "だとうせい"
+  }, {
+    "id": "D",
+    "content": "たとうせい"
+  }],
+  "answer": "C",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

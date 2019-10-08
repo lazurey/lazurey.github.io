@@ -1,0 +1,22 @@
+{
+  "stem": "これは計画を成功させるために（　　）最良の方法だ。",
+  "options": [{
+    "id": "A",
+    "content": "考えきる"
+  }, {
+    "id": "B",
+    "content": "考ええない"
+  }, {
+    "id": "C",
+    "content": "考え抜く"
+  }, {
+    "id": "D",
+    "content": "考えうる"
+  }],
+  "answer": "D",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

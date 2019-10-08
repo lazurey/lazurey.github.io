@@ -1,0 +1,22 @@
+{
+  "stem": "子どもはなるべく外で遊ばせる（　　）だ。",
+  "options": [{
+    "id": "A",
+    "content": "ほど"
+  }, {
+    "id": "B",
+    "content": "はず"
+  }, {
+    "id": "C",
+    "content": "わけ"
+  }, {
+    "id": "D",
+    "content": "べき"
+  }],
+  "answer": "D",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

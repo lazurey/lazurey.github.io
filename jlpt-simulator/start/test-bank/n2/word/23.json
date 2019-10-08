@@ -1,0 +1,22 @@
+{
+  "stem": "この地区では<u>大規模</u>な再開発が行われている。",
+  "options": [{
+    "id": "A",
+    "content": "たいきぼ"
+  }, {
+    "id": "B",
+    "content": "たいぎぼ"
+  }, {
+    "id": "C",
+    "content": "だいぎぼ"
+  }, {
+    "id": "D",
+    "content": "だいきぼ"
+  }],
+  "answer": "D",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

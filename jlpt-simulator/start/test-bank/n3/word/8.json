@@ -1,0 +1,22 @@
+{
+  "stem": "日本<u>列島</u>は南北に長い。",
+  "options": [{
+    "id": "A",
+    "content": "れつとう"
+  }, {
+    "id": "B",
+    "content": "れつどう"
+  }, {
+    "id": "C",
+    "content": "れっと"
+  }, {
+    "id": "D",
+    "content": "れっとう"
+  }],
+  "answer": "D",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

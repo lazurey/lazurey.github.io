@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mono</title>
+  <meta charset="utf-8">
+  <script src="d3/d3.js"></script>
+  <script src="d3/d3.layout.cloud.js"></script>
+  <style type="text/css">
+    #container {
+      width: 960px;
+      margin: 20px auto;
+    }
+
+    body {
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+<div id="container">
+  
+</div>
+
+<script>
+(function() {
+
+  var draw_word_cloud = function(json) {
+    if (json && json.data) {
+      d3.select("#container").append("h1").text(json.title);
+      var word_arr = [],
+          weight_arr = [];
+
+      for (var i = 0; i < json.data.length; i++) {
+        word_arr.push(json.data[i].word);
+        weight_arr.push(json.data[i].weight);
+      }
+    }
+    var fill = d3.scale.category20();
+
+    var index_word = 0;
+
+    var layout = d3.layout.cloud()
+        .size([1024, 600])
+        .words(word_arr.map(function(d) {
+          var text_size = 10 + weight_arr[index_word] * 100
+          index_word++;
+          return {text: d, size: text_size, test: "haha"};
+        }))
+        .padding(5)
+        .rotate(function() { return ~~(Math.random() * 2) * 90; })
+        .font("Impact")
+        .fontSize(function(d) { return d.size; })
+        .on("end", draw);
+    
+    layout.start();
+
+    function draw(words) {
+      d3.select("#container").append("svg")
+          .attr("width", layout.size()[0])
+          .attr("height", layout.size()[1])
+        .append("g")
+          .attr("transform", "translate(" + layout.size()[0] / 2 + "," + layout.size()[1] / 2 + ")")
+        .selectAll("text")
+          .data(words)
+        .enter().append("text")
+          .style("font-size", function(d) { return d.size + "px"; })
+          .style("font-family", "Menlo")
+          .style("fill", function(d, i) { return fill(i); })
+          .attr("text-anchor", "middle")
+          .attr("transform", function(d) {
+            return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+          })
+          .text(function(d) { return d.text; });
+      }
+  }
+
+  // d3.json("/out-2014-C.json", draw_word_cloud);
+  
+  d3.json("out-2012.json", draw_word_cloud);
+
+  d3.json("out-2013.json", draw_word_cloud);
+
+  d3.json("out-2014-A.json", draw_word_cloud);
+  d3.json("out-2014-B.json", draw_word_cloud);
+
+  d3.json("out-2015-A.json", draw_word_cloud);
+  d3.json("out-2015-all.json", draw_word_cloud);
+
+})();
+</script>
+</body>
+</html>

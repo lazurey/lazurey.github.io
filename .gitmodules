@@ -1,0 +1,3 @@
+[submodule "jlpt-simulator"]
+	path = jlpt-simulator
+	url = https://github.com/lazurey/jlpt-simulator.git

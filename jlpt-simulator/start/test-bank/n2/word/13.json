@@ -1,0 +1,22 @@
+{
+  "stem": "帰宅途中、突然の<u>夕立</u>に遭った。",
+  "options": [{
+    "id": "A",
+    "content": "ゆうだて"
+  }, {
+    "id": "B",
+    "content": "ゆうだち"
+  }, {
+    "id": "C",
+    "content": "ゆうりつ"
+  }, {
+    "id": "D",
+    "content": "ゆうせつ"
+  }],
+  "answer": "B",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

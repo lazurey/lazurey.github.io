@@ -1,0 +1,22 @@
+{
+  "stem": "いろいろ（　　）、やはり転職することにした。",
+  "options": [{
+    "id": "A",
+    "content": "悩んだ反面"
+  }, {
+    "id": "B",
+    "content": "悩んでいる反面"
+  }, {
+    "id": "C",
+    "content": "悩んだあげく"
+  }, {
+    "id": "D",
+    "content": "悩んでいるあげく"
+  }],
+  "answer": "C",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

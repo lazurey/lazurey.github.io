@@ -1,0 +1,22 @@
+{
+  "stem": "驚いたこと（　　）、彼は一週間で卒業論文を書き上げたという。",
+  "options": [{
+    "id": "A",
+    "content": "も"
+  }, {
+    "id": "B",
+    "content": "で"
+  }, {
+    "id": "C",
+    "content": "に"
+  }, {
+    "id": "D",
+    "content": "は"
+  }],
+  "answer": "C",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

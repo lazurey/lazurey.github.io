@@ -1,0 +1,22 @@
+{
+  "stem": "周りの人が何を言った（　　）私の決意は変わらない。",
+  "options": [{
+    "id": "A",
+    "content": "ところへ"
+  }, {
+    "id": "B",
+    "content": "ところが"
+  }, {
+    "id": "C",
+    "content": "ところで"
+  }, {
+    "id": "D",
+    "content": "ところに"
+  }],
+  "answer": "C",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

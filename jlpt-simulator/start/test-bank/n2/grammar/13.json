@@ -1,0 +1,22 @@
+{
+  "stem": "小野さんは事務処理（　　）、誰にも負けない。",
+  "options": [{
+    "id": "A",
+    "content": "については"
+  }, {
+    "id": "B",
+    "content": "にしては"
+  }, {
+    "id": "C",
+    "content": "にかけては"
+  }, {
+    "id": "D",
+    "content": "によっては"
+  }],
+  "answer": "C",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

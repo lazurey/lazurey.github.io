@@ -1,0 +1,22 @@
+{
+  "stem": "山村さんはアメリカに十年も住んでいたから、英語が上手な（　　）。",
+  "options": [{
+    "id": "A",
+    "content": "わけだ"
+  }, {
+    "id": "B",
+    "content": "ものだ"
+  }, {
+    "id": "C",
+    "content": "つもりだ"
+  }, {
+    "id": "D",
+    "content": "ことだ"
+  }],
+  "answer": "B",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

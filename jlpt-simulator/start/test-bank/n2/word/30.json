@@ -1,0 +1,22 @@
+{
+  "stem": "セールスマンの<u>強引</u>な訪問販売に困っている。",
+  "options": [{
+    "id": "A",
+    "content": "つよひき"
+  }, {
+    "id": "B",
+    "content": "つよびき"
+  }, {
+    "id": "C",
+    "content": "きょういん"
+  }, {
+    "id": "D",
+    "content": "ごういん"
+  }],
+  "answer": "D",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}

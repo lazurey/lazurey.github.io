@@ -1,0 +1,22 @@
+{
+  "stem": "彼はこのレストランの評判を（ ）にして、遠くからやってきた。",
+  "options": [{
+    "id": "A",
+    "content": "手"
+  }, {
+    "id": "B",
+    "content": "口"
+  }, {
+    "id": "C",
+    "content": "耳"
+  }, {
+    "id": "D",
+    "content": "首"
+  }],
+  "answer": "C",
+  "meta": {
+    "level": ["N2"],
+    "history": false,
+    "year": ""
+  }
+}
