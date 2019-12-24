@@ -1,0 +1,122 @@
+:root {
+  --dark: #050705;
+  --light: #f5f4f0;
+  --primary: #eea376;
+  --secondary: #699581;
+}
+
+body {
+  font-family: 'Ma Shan Zheng', Helvetica, Arial, cursive;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+}
+
+.title {
+  color: var(--dark);
+  background: var(--light);
+  width: 61.8%;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  position: relative;
+  z-index: 10;
+}
+
+.title h1 {
+  font-size: 100px;
+  z-index: 9;
+  letter-spacing: 20px;
+}
+
+.title .bg {
+  z-index: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.title .subtitle {
+  font-size: 18px;
+  z-index: 9;
+}
+
+.content {
+  background: var(--dark);
+  color: var(--light);
+  width: 38.2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content .wrapper {
+  height: 61.8vh;
+  overflow-y: scroll;
+  width: 61.8%;
+  font-size: 24px;
+}
+
+.pagination {
+  position: fixed;
+  bottom: 20px;
+  right: 0;
+  background: var(--light);
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+}
+
+.pagination span {
+  color: #999;
+}
+
+.pagination a {
+  color: var(--dark);
+  display: block;
+  text-decoration: none;
+  padding: 16px;
+}
+
+.pagination a:hover {
+  opacity: 0.8;
+}
+
+@media only screen and (max-width: 880px) {
+  body {
+    min-width: 320px;
+    overflow-x: scroll;
+  }
+  main {
+    display: block;
+    height: auto;
+  }
+  .title {
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 60px 0;
+  }
+  .title h1 {
+    margin: 0;
+  }
+  .title .bg {
+    opacity: 0.3;
+    right: unset;
+    left: 0;
+  }
+  .content {
+    width: 100%;
+    display: block;
+    padding: 40px 0;
+  }
+  .content .wrapper {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
