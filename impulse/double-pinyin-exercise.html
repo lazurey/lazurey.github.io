@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="utf-8">
+  <title>双拼练习</title>
+  <style type="text/css">
+    body {
+      font-size: 14px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      width: 600px;
+      text-align: center;
+      margin: 40px auto;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    p {
+      text-align: center;
+    }
+    button {
+      margin: 20px auto;
+      cursor: pointer;
+      border: none;
+      font-size: 16px;
+      line-height: 36px;
+      padding: 0 20px;
+      background-color: #682CC8;
+      color: #fff;
+      font-weight: 500;
+      display: block;
+    }
+    textarea {
+      width: 500px;
+      font-size: 14px;
+      border-color: #682CC8;
+      border-radius: 8px;
+      line-height: 24px;
+    }
+  </style>
+</head>
+<body>
+  <h1>双拼平翘舌音专项练习</h1>
+  <p>
+    <button id="generate">生成语句</button>
+  </p>
+  <textarea id="result" rows="12"></textarea>
+  <p id="meta"></p>
+  <button id="copy">复制</button>
+</body>
+<script type="text/javascript" src="../libs/jquery.min.js"></script>
+<script type="text/javascript">
+  const word_time = ['未来的某一天', '就在刚刚', '清晨', '出事的早上', '送走张书记的那天', '迟来的那天',
+    '着急的时候', '吃饭时', '十月', '十二月', '世界大战那年', '上周', '上上周', '周三', '周四'
+  ];
+  const time_length = word_time.length;
+
+  const word_location = ['知春路上', '梳妆台前', '政治局里', '某个城市'];
+  const location_length = word_location.length;
+
+  const word_subject = ['我', '你', '他', '陈诚', '张书晨', '陈叔叔', '小张', '谁'];
+  const subject_length = word_subject.length;
+
+  const word_verb = ['生产', '吃', '制造', '炸', '捉', '铲', '说说', '杀', '试吃', '手刃', '声明',
+    '晒', '装作', '斩', '处置'
+  ];
+  const verb_length = word_verb.length;
+
+  const word_noun = ['屎', '战争', '床', '春茶', '猪猪', '蜘蛛', '啄木鸟', '鹌鹑', '闹钟', '操守', '抄手',
+  '潮汕火锅', '水杉', '生命周期'];
+  const noun_length = word_noun.length;
+
+  const word_adj = ['迟早', '事实上', '准时', '琐碎', '好吃', '解释不清', '阵阵'];
+  const adj_length = word_adj.length;
+
+  const word_adv = ['郑重其事', '重中之重', '蠢蠢欲动', '痴痴', '真真'];
+  const adv_length = word_adv.length;
+  
+  const random = (max) => {
+    return Math.floor(Math.random() * 9527) % max;
+  }
+  
+  const should = (word) => {
+    return random(42) % 2 === 0 ? word : '';
+  }
+
+  const ramble = () => {
+    const time = word_time[random(time_length)];
+    const location = word_location[random(location_length)];
+    const subject = word_subject[random(subject_length)];
+    const verb = word_verb[random(verb_length)];
+    const noun = word_noun[random(noun_length)];
+    const adj = word_adj[random(adj_length)];
+    const adv = word_adv[random(adv_length)];
+    return `${time}，${subject}在${location}${should(adv + '地')}${verb}${should('了')}${should(adj + '的')}${noun}。`;
+  }
+
+  const repeat = (times) => {
+    const arr = new Array(times);
+    return arr.fill(0).map(ramble).join('\n');
+  }
+
+  $(function() {
+    let currentResult = '';
+
+    $('button#generate').click(() => {
+      currentResult = repeat(30);
+      $('#result').val(currentResult);
+      $('#meta').text(`总字数：${currentResult.length}`)
+    });
+    $('button#copy').click(() => {
+      navigator.clipboard.writeText(currentResult);
+    });
+  })();
+</script>
+</html>
