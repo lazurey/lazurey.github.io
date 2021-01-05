@@ -16,7 +16,7 @@
   "author": "lazureys@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "emotion": "^10.0.7",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
