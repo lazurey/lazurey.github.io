@@ -1,0 +1,523 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js" integrity="sha512-M7nHCiNUOwFt6Us3r8alutZLm9qMt4s9951uo8jqO4UwJ1hziseL6O3ndFyigx6+LREfZqnhHxYjKRJ8ZQ69DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <title>《卡拉马佐夫兄弟》人物表</title>
+        <style>
+            html {
+                background-color: #fefefd;
+            }
+            .char-table td {
+                padding: 8px;
+                border-radius: 4px;
+            }
+
+            .char-table td.na {
+                text-align: center;
+            }
+
+            .char-table td.dead {
+                border-radius: 2px;
+            }
+
+            .char-table tbody tr td:first-child {
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .char-table tbody tr td:nth-child(2) {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <main class="mx-auto w_80 max-w-full w-[1200px]">
+            <h1 class="font-bold text-2xl text-center mt-6 text-slate-800">《卡拉马佐夫兄弟》人物表</h1>
+            <p class="text-sm text-slate-300 text-center mb-4">Бра́тья Карама́зовы</p>
+
+            <div class="my-4 text-xs border-t pt-2">
+                <p class="text-right">参照
+                    <a class="text-sky-700 transition-colors hover:text-sky-500" href="https://book.douban.com/subject/25887924/" target="_blank">
+                        《卡拉马佐夫兄弟》荣如德 译（上海译文出版社 2015版）
+                    </a>
+                </p>
+            </div>
+
+            <h2 class="mb-4 py-8 text-center letter-spacing-8 text-blue-700 font-bold">&#9886; 主要人物 &#9887;</h2>
+
+            <table class="table-auto border-collapse w-full text-sm char-table border-spacing-2 border-separate text-sm">
+                <thead>
+                    <tr>
+                        <th class="border-b font-medium p-4 pt-0 pb-3 text-slate-400">记忆名</th>
+                        <th class="border-b font-medium p-4 pt-0 pb-3 text-slate-400">常见名</th>
+                        <th class="border-b font-medium p-4 pt-0 pb-3 text-slate-400">全名</th>
+                        <th class="border-b font-medium p-4 pt-0 pb-3 text-slate-400">其它称谓</th>
+                        <th class="border-b font-medium p-4 pt-0 pb-3 text-slate-400">重要关系</th>
+                        <th class="border-b font-medium p-4 pt-0 pb-3 text-slate-400">出现章节</th>
+                    </tr>
+                </thead>
+                <tbody id="main-char-table-body">
+                </tbody>
+            </table>
+            
+            <h2 class="mb-4 mt-8 py-8 border-t text-center mb-4 text-slate-600 font-bold">&#9834; 次要人物 &#9834;</h2>
+            <table class="table-auto border-collapse w-full text-sm char-table border-spacing-2 border-separate text-sm">
+                <thead>
+                    <tr>
+                        <th class="border-b font-medium p-4 pt-0 pb-3 text-slate-400">推荐名</th>
+                        <th class="border-b font-medium p-4 pt-0 pb-3 text-slate-400">常见名</th>
+                        <th class="border-b font-medium p-4 pt-0 pb-3 text-slate-400">全名</th>
+                        <th class="border-b font-medium p-4 pt-0 pb-3 text-slate-400">重要关系</th>
+                        <th class="border-b font-medium p-4 pt-0 pb-3 text-slate-400">出现章节</th>
+                    </tr>
+                </thead>
+                <tbody id="sec-char-table-body">
+
+                </tbody>
+            </table>
+            
+            <h2 class="mb-4 mt-8 py-8 border-t text-center letter-spacing-8 text-blue-700 font-bold">&#9886; 人物关系图 &#9887;</h2>
+            <svg id="rel-map" class="border bg-slate-50"></svg>
+            <ul class="flex gap-2 mb-8 mt-4">
+                <li>
+                    <button class="bg-sky-100 text-sky-600 text-sm px-2 py-1" onclick="updateName('firstName')">全名</button>
+                </li>
+                <li>
+                    <button class="bg-sky-100 text-sky-600 text-sm px-2 py-1" onclick="updateName('common')">常用名</button>
+                </li>
+                <li>
+                    <button class="bg-sky-100 text-sky-600 text-sm px-2 py-1" onclick="updateName('recc')">简称</button>
+                </li>
+            </ul>
+        </main>
+    </body>
+    <script>
+
+        let displayAttr = "common";
+
+        const updateName = (attr) => {
+            console.log(attr);
+            displayAttr = attr;
+        }
+
+        const charData = [{
+            source: "A1",
+            target: "A2",
+            type: "family"
+        }, {
+            source: "A1",
+            target: "A3",
+            type: "family"
+        }, {
+            source: "A1",
+            target: "A4",
+            type: "family"
+        }, {
+            source: "A1",
+            target: "B1",
+            type: "love"
+        }, {
+            source: "A1",
+            target: "B2",
+            type: "love"
+        }, {
+            source: "A7",
+            target: "B9",
+            type: "family"
+        }, {
+            source: "B1",
+            target: "B6",
+            type: "family"
+        }, {
+            source: "B6",
+            target: "B7",
+            type: "family"
+        }, {
+            source: "B8",
+            target: "B8",
+            type: "family"
+        }, {
+            source: "A2",
+            target: "A5",
+            type: "love"
+        }, {
+            source: "A4",
+            target: "A6",
+            type: "friendship"
+        }, {
+            source: "A4",
+            target: "B3",
+            type: "friendship"
+        }, {
+            source: "A1",
+            target: "B4",
+            type: "friendship"
+        }, {
+            source: "A1",
+            target: "B5",
+            type: "friendship"
+        }];
+
+        const CHARACTERS = {
+            "A1": {
+                recc: "老卡",
+                common: "费尧多尔",
+                firstName: "费尧多尔",
+                middleName: "巴甫洛维奇",
+                lastName: "卡拉马佐夫",
+                otherNames: "地主、老卡拉马佐夫",
+                relationship: "",
+                firstMentionedIn: "卷一·一户人家的历史（一）P3",
+                gender: "M",
+                color: "stone",
+            },
+            "A2": {
+                recc: "老大",
+                common: "米嘉",
+                firstName: "德米特里",
+                middleName: "费尧多罗维奇",
+                lastName: "卡拉马佐夫",
+                otherNames: "米特里、米剑卡",
+                relationship: "前妻所出",
+                firstMentionedIn: "卷一·一户人家的历史（一）P3",
+                gender: "M",
+                color: "blue",
+            },
+            "A3": {
+                recc: "老二",
+                common: "伊万",
+                firstName: "伊万",
+                middleName: "费尧多罗维奇",
+                lastName: "卡拉马佐夫",
+                otherNames: "",
+                relationship: "续弦所出",
+                firstMentionedIn: "卷一·一户人家的历史（一）P3",
+                gender: "M",
+                color: "sky",
+            },
+            "A4": {
+                recc: "老三",
+                common: "阿辽沙",
+                firstName: "阿列克塞",
+                middleName: "费尧多罗维奇",
+                lastName: "卡拉马佐夫",
+                otherNames: "阿辽什卡",
+                relationship: "续弦所出",
+                firstMentionedIn: "卷一·一户人家的历史（一）P3",
+                gender: "M",
+                color: "cyan",
+            },
+            "A5": {
+                recc: "卡嘉",
+                common: "卡嘉",
+                firstName: "卡捷琳娜",
+                middleName: "伊万诺芙娜",
+                lastName: "维尔霍夫策娃",
+                otherNames: "卡嘉、卡笺卡",
+                relationship: "米嘉的未婚妻",
+                firstMentionedIn: "不该举行的聚会（4）P65",
+                gender: "F",
+            },
+            "A6": {
+                recc: "",
+                common: "拉基津",
+                firstName: "米哈依尔",
+                middleName: "奥西波维奇",
+                lastName: "拉基津",
+                otherNames: "米沙",
+                relationship: "宗教学校毕业生",
+                firstMentionedIn: "卷一·一户人家的历史（二）",
+                gender: "M",
+                color: "cyan",
+            },
+            "A7": {
+                recc: "莉扎",
+                common: "莉扎",
+                firstName: "莉扎",
+                middleName: "",
+                lastName: "",
+                otherNames: "Lise、莉兹",
+                relationship: "富婆的女儿",
+                firstMentionedIn: "不该举行的聚会（4）P64",
+                gender: "F",
+            },
+            // 次要人物
+            "B1": {
+                recc: "前妻",
+                firstName: "阿黛拉伊达",
+                lastName: "伊万诺夫娜",
+                relationship: "老卡前妻",
+                firstMentionedIn: "",
+                gender: "F",
+                color: "violet",
+                isDead: true,
+            },
+            "B2": {
+                recc: "续弦",
+                firstName: "索菲娅",
+                lastName: "伊万诺夫娜",
+                relationship: "老卡第二个妻子",
+                firstMentionedIn: "",
+                gender: "F",
+                color: "violet",
+                isDead: true,
+            },
+            "B3": {
+                recc: "神父",
+                common: "佐西马长老",
+                firstName: "佐西马神父",
+                middleName: "",
+                lastName: "",
+                relationship: "修道院长老",
+                firstMentionedIn: "",
+                gender: "M",
+            },
+            "B4": {
+                recc: "仆人",
+                common: "格里果利",
+                firstName: "格里果利",
+                middleName: "瓦西里耶维奇",
+                lastName: "库图佐夫",
+                relationship: "卡拉马佐夫家的仆人",
+                firstMentionedIn: "",
+                gender: "M",
+            },
+            "B5": {
+                recc: "厨子",
+                common: "",
+                firstName: "帕维尔",
+                middleName: "费尧多罗维奇",
+                lastName: "斯乜尔加科夫",
+                relationship: "卡拉马佐夫家的厨子",
+                firstMentionedIn: "",
+                gender: "M",
+            },
+            "B6": {
+                recc: "",
+                common: "米乌索夫",
+                firstName: "彼得",
+                middleName: "亚历山德罗维奇",
+                lastName: "米乌索夫",
+                relationship: "前妻堂兄",
+                firstMentionedIn: "",
+                gender: "M",
+            },
+            "B7": {
+                recc: "",
+                common: "彼得·卡尔甘诺夫",
+                firstName: "彼得",
+                middleName: "福米奇",
+                lastName: "卡尔甘诺夫",
+                relationship: "米乌索夫的远亲、20来岁、阿辽沙的朋友",
+                firstMentionedIn: "不该举行的聚会",
+                gender: "M",
+            },
+            "B8": {
+                recc: "",
+                common: "马克西莫夫",
+                firstName: "马克西莫夫",
+                relationship: "土拉省地主",
+                firstMentionedIn: "不该举行的聚会",
+                gender: "M",
+            },
+            "B9": {
+                recc: "富婆",
+                common: "",
+                firstName: "叶卡杰丽娜",
+                middleName: "奥西波芙娜",
+                lastName: "霍赫拉科娃",
+                relationship: "有钱的寡妇，莉扎的母亲",
+                firstMentionedIn: "不该举行的聚会",
+                gender: "F",
+            },
+        };
+
+        const mainCharacters = ["A1", "A2", "A3", "A4", 'A5', "A6", "A7"];
+
+        const secCharacters = ["B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9"]
+
+        const TYPE_COLOR = {
+            family: "#0ea5e9",
+            love: "#ec4899",
+            friendship: "#84cc16",
+        }
+
+        const getGenderColor = (gender) => gender === "M" ? "sky" : "pink";
+        const rv = (value) => value || "/";
+
+        const rName = (firstName, middleName, lastName, c) => {
+            return `<td class="bg-${c}-100 text-${c}-500">
+                ${ firstName ? `<strong class="text-${c}-600">${firstName}</strong>` : "" }
+                ${ middleName ? `·${middleName}` : ""}
+                ${ lastName ? `·${lastName}` : ""}
+            </td>`;
+        }
+
+        const renderMainTable = (eleId, ids) => {
+            const ele = document.getElementById(eleId);
+            const innterHTMLArr = ids.map((charId) => {
+                const charactor = CHARACTERS[charId];
+                if (!charactor) return "";
+                const { recc, common, firstName, middleName, lastName, otherNames, relationship, firstMentionedIn, gender, color } = charactor;
+                const c = color || getGenderColor(gender);
+                return `<tr>
+                        <td class="bg-${c}-200 text-${c}-900 font-bold">${recc}</td>
+                        <td class="bg-${c}-100 text-${c}-800">${common}</td>
+                        ${rName(firstName, middleName, lastName, c)}
+                        <td class="bg-${c}-50 text-${c}-400">${rv(otherNames)}</td>
+                        <td class="bg-${c}-50 text-${c}-400">${rv(relationship)}</td>
+                        <td class="bg-${c}-50 text-${c}-400">${rv(firstMentionedIn)}</td>
+                    </tr>`;
+            })
+            ele.innerHTML = innterHTMLArr.join("");
+        }
+
+        const renderSecTable = (eleId, ids) => {
+            const ele = document.getElementById(eleId);
+            const innterHTMLArr = ids.map((charId) => {
+                const charactor = CHARACTERS[charId];
+                if (!charactor) return "";
+                const { recc, common, firstName, middleName, lastName, relationship, firstMentionedIn, gender, color } = charactor;
+                const c = color || getGenderColor(gender);
+                return `<tr>
+                        <td class="bg-${c}-200 text-${c}-900 font-bold">${rv(recc)}</td>
+                        <td class="bg-${c}-100 text-${c}-800">${rv(common)}</td>
+                        ${rName(firstName, middleName, lastName, c)}
+                        <td class="bg-${c}-50 text-${c}-400">${rv(relationship)}</td>
+                        <td class="bg-${c}-50 text-${c}-400">${rv(firstMentionedIn)}</td>
+                    </tr>`;
+            })
+            ele.innerHTML = innterHTMLArr.join("");
+        }
+
+        function linkArc(d) {
+            const r = Math.hypot(d.target.x - d.source.x, d.target.y - d.source.y);
+            return `
+                M${d.source.x},${d.source.y}
+                A${r},${r} 0 0,1 ${d.target.x},${d.target.y}
+            `;
+        }
+
+        const drag = (simulation) => {
+  
+            function dragstarted(event, d) {
+                if (!event.active) simulation.alphaTarget(0.3).restart();
+                d.fx = d.x;
+                d.fy = d.y;
+            }
+            
+            function dragged(event, d) {
+                d.fx = event.x;
+                d.fy = event.y;
+            }
+            
+            function dragended(event, d) {
+                if (!event.active) simulation.alphaTarget(0);
+                d.fx = null;
+                d.fy = null;
+            }
+            
+            return d3.drag()
+                .on("start", dragstarted)
+                .on("drag", dragged)
+                .on("end", dragended);
+        }
+
+        const initChart = () => {
+            const width = 1200;
+            const height = 600;
+            const types = Array.from(new Set(charData.map(d => d.type)));
+            const nodes = Array.from(new Set(charData.flatMap(l => [l.source, l.target])), id => {
+                const c = CHARACTERS[id];
+                return {
+                    ...c,
+                    id,
+                }
+            });
+            const links = charData.map(d => Object.create(d))
+
+            // const color = d3.scaleOrdinal(types, d3.schemeDark2);
+
+            const color = d => TYPE_COLOR[d.type];
+
+            const simulation = d3.forceSimulation(nodes)
+                .force("link", d3.forceLink(links).id(d => d.id))
+                .force("charge", d3.forceManyBody().strength(-800))
+                .force("x", d3.forceX())
+                .force("y", d3.forceY());
+
+            const svg = d3.select("#rel-map")
+                .attr("viewBox", [-width / 2, -height / 2, width, height])
+                .attr("width", width)
+                .attr("height", height)
+                .attr("style", "max-width: 100%; height: auto; font: 11px sans-serif;");
+
+            // Per-type markers, as they don't inherit styles.
+            svg.append("defs").selectAll("marker")
+            .data(types)
+            .join("marker")
+                .attr("id", d => `arrow-${d}`)
+                .attr("viewBox", "0 -5 10 10")
+                .attr("refX", 15)
+                .attr("refY", -0.5)
+                .attr("markerWidth", 6)
+                .attr("markerHeight", 6)
+                .attr("orient", "auto")
+                .attr("fill", "#94a3b8")
+            .append("path")
+                .attr("fill", color)
+                .attr("d", "M0,-5L10,0L0,5");
+
+            const link = svg.append("g")
+                .attr("fill", "none")
+                .attr("stroke-width", 1.5)
+                .selectAll("path")
+                .data(links)
+                .join("path")
+                .attr("stroke", color)
+                .attr("marker-end", d => `url(${new URL(`#arrow-${d.type}`, location)})`);
+
+            const node = svg.append("g")
+                .attr("fill", "currentColor")
+                .attr("stroke-linecap", "round")
+                .attr("stroke-linejoin", "round")
+                .selectAll("g")
+                .data(nodes)
+                .join("g")
+                .call(drag(simulation));
+
+            node.append("circle")
+                .attr("stroke", "white")
+                .attr("stroke-width", 1.5)
+                .attr("fill", d => d.gender === "F" ? "#db2777" : "#2563eb")
+                .attr("r", 4);
+
+            node.append("text")
+                .attr("x", 8)
+                .attr("y", "0.31em")
+                .text(d => {
+                    return CHARACTERS[d.id][displayAttr] || CHARACTERS[d.id].firstName;
+                })
+            .clone(true).lower()
+                .attr("fill", "none")
+                .attr("stroke", "white")
+                .attr("stroke-width", 3);
+
+            simulation.on("tick", () => {
+                link.attr("d", linkArc);
+                node.attr("transform", d => `translate(${d.x},${d.y})`);
+            });
+
+            // invalidation.then(() => simulation.stop());
+
+            return Object.assign(svg.node(), {scales: {color}});
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+            initChart();
+            renderMainTable("main-char-table-body", mainCharacters);
+            renderSecTable("sec-char-table-body", secCharacters);
+        });
+    </script>
+</html>
