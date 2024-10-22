@@ -39,12 +39,16 @@ const updateScore = (el) => {
 }
 
 const initGame = () => {
-    console.log('hhhh');
     const w = window.screen.availWidth - CHICKEN_SIZE;
     const h = window.screen.availHeight - CHICKEN_SIZE - 100;
     const canvas = document.getElementById("canvas");
     const chicken = document.getElementById("chicken");
     const scoreEl = document.getElementById("score");
+
+    const initPos = genNextPos(w, h);
+    chicken.style.left = initPos.left;
+    chicken.style.top = initPos.top;
+
     chicken.addEventListener("click", () => {
         appendEgg(canvas, chicken.style.left, chicken.style.top);
         const { left, top } = genNextPos(w, h);

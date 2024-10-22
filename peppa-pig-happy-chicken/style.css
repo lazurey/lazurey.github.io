@@ -2,6 +2,7 @@ body {
     background-color: #00b6f0;
     padding: 0;
     margin: 0;
+    overflow: hidden;
 }
 
 .header {
@@ -21,17 +22,43 @@ img#chicken {
     position: absolute;
     z-index: 99;
     width: 200px;
-    left: 45%;
-    top: 45%;
     cursor: pointer;
-    transition: left 300ms ease-in-out, top 300ms ease-in-out;
+    user-select: none;
+    transition: left 300ms ease-in-out, top 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+img#chicken:hover {
+    filter: drop-shadow(0 0 24px rgba(255, 255, 255, 0.6));
+    transform: scale(1.1);
+}
+
+img#chicken:active {
+    transform: scale(0.8);
+}
+
+@keyframes scaleEgg {
+    0% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(1.6);
+        filter: drop-shadow(0 0 24px rgba(255, 255, 255, 0.6));
+    }
+    100% {
+        transform: scale(1);
+        filter: none;
+    }
 }
 
 .egg {
     position: absolute;
     z-index: 1;
     width: 100px;
+    user-select: none;
+    animation: scaleEgg 1s ease-in-out;
 }
+
+
 
 #score {
     font-size: 100px;
@@ -39,4 +66,5 @@ img#chicken {
     color: #fcfe2d;
     font-family: monospace;
     letter-spacing: -8.2px;
+    user-select: none;
 }
