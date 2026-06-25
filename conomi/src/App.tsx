@@ -120,10 +120,13 @@ function App() {
   const [timeExpired, setTimeExpired] = useState(false)
   const [transitionSeconds, setTransitionSeconds] = useState(3)
   const [isBoardLocked, setIsBoardLocked] = useState(false)
+  const [assetsLoaded, setAssetsLoaded] = useState(false)
+  const [cardSize, setCardSize] = useState({ width: 0, height: 0 })
 
   const timerRef = useRef<number | null>(null)
   const flipTimeoutRef = useRef<number | null>(null)
   const transitionRef = useRef<number | null>(null)
+  const boardRef = useRef<HTMLDivElement | null>(null)
 
   const currentLevel = levels[levelIndex]
   const totalCards = currentLevel.pairs * 2
@@ -252,6 +255,34 @@ function App() {
   }
 
   useEffect(() => {
+    const preloadSources = [
+      cardCover,
+      card1,
+      card2,
+      card3,
+      card4,
+      card5,
+      card6,
+      card7,
+      card8,
+      card9,
+      card10,
+    ]
+    const imagePromises = preloadSources.map(
+      (src) =>
+        new Promise<void>((resolve) => {
+          const img = new Image()
+          img.onload = () => resolve()
+          img.src = src
+        }),
+    )
+
+    Promise.all(imagePromises).then(() => {
+      setAssetsLoaded(true)
+    })
+  }, [])
+
+  useEffect(() => {
     if (screen !== 'playing' || timeExpired) {
       clearTimer()
       return
@@ -314,6 +345,36 @@ function App() {
   }, [screen, levelIndex])
 
   useEffect(() => {
+    const updateCardSize = () => {
+      const boardEl = boardRef.current
+      if (!boardEl) {
+        return
+      }
+
+      const columns = boardColumns
+      const rows = Math.ceil(cards.length / columns)
+      const gap = 16
+      const boardRect = boardEl.getBoundingClientRect()
+      const availableWidth = boardRect.width - gap * (columns - 1)
+      const availableHeight = Math.max(
+        0,
+        window.innerHeight - boardRect.top - 12 - (rows - 1) * gap,
+      )
+
+      const maxWidthPerCard = Math.floor(availableWidth / columns)
+      const maxHeightPerCard = Math.floor(availableHeight / rows)
+      const computedWidth = Math.max(80, Math.min(maxWidthPerCard, Math.floor(maxHeightPerCard / 1.3)))
+      const computedHeight = Math.round(computedWidth * 1.3)
+
+      setCardSize({ width: computedWidth, height: computedHeight })
+    }
+
+    updateCardSize()
+    window.addEventListener('resize', updateCardSize)
+    return () => window.removeEventListener('resize', updateCardSize)
+  }, [boardColumns, cards.length, screen])
+
+  useEffect(() => {
     if (screen !== 'levelComplete') {
       return
     }
@@ -360,32 +421,43 @@ function App() {
     </div>
   )
 
-  const renderBoard = () => (
-    <div className="board" style={{ gridTemplateColumns: `repeat(${boardColumns}, minmax(80px, 1fr))` }}>
-      {cards.map((card) => {
-        const isFlipped = flippedIds.includes(card.id) || card.matched
-        return (
-          <button
-            key={card.id}
-            type="button"
-            className={`card-button ${isFlipped ? 'flipped' : ''} ${card.matched ? 'matched' : ''}`}
-            onClick={() => handleCardClick(card)}
-            disabled={isBoardLocked || flippedCount === 2}
-          >
-            <div className="card-inner">
-              <div className="card-face card-front">
-                <img src={card.image} alt="卡片" />
+  const renderBoard = () => {
+    const gridColumns = cardSize.width
+      ? `repeat(${boardColumns}, ${cardSize.width}px)`
+      : `repeat(${boardColumns}, minmax(80px, 1fr))`
+
+    return (
+      <div
+        ref={boardRef}
+        className="board"
+        style={{ gridTemplateColumns: gridColumns, justifyContent: 'center' }}
+      >
+        {cards.map((card) => {
+          const isFlipped = flippedIds.includes(card.id) || card.matched
+          return (
+            <button
+              key={card.id}
+              type="button"
+              className={`card-button ${isFlipped ? 'flipped' : ''} ${card.matched ? 'matched' : ''}`}
+              onClick={() => handleCardClick(card)}
+              disabled={isBoardLocked || flippedCount === 2}
+              style={cardSize.width ? { width: `${cardSize.width}px`, height: `${cardSize.height}px` } : undefined}
+            >
+              <div className="card-inner">
+                <div className="card-face card-front">
+                  <img src={card.image} alt="卡片" />
+                </div>
+                <div
+                  className="card-face card-back"
+                  style={{ backgroundImage: `url(${cardCover})` }}
+                />
               </div>
-              <div
-                className="card-face card-back"
-                style={{ backgroundImage: `url(${cardCover})` }}
-              />
-            </div>
-          </button>
-        )
-      })}
-    </div>
-  )
+            </button>
+          )
+        })}
+      </div>
+    )
+  }
 
   const renderTimeExpiredPrompt = () => {
     if (!timeExpired || addTimeLeft <= 0) {
@@ -418,9 +490,14 @@ function App() {
             <div className="message-card">
               {renderStartDecor()}
               <h2>准备开始了吗？</h2>
-              <p>第一关 3 组卡片，10 秒；第二关 6 组卡片，15 秒；第三关 8 组卡片，20 秒；第四关 10 组卡片，30 秒。</p>
-              <button className="primary-button large" type="button" onClick={startGame}>
-                开始游戏
+              <p>可可嫑嫑米米是最好的好朋友。</p>
+              <button
+                className="primary-button large"
+                type="button"
+                onClick={startGame}
+                disabled={!assetsLoaded}
+              >
+                {assetsLoaded ? '开始游戏' : '正在加载图片...'}
               </button>
             </div>
           </section>
