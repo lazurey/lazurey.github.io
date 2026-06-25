@@ -1,0 +1,387 @@
+.app-shell {
+  padding: 12px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(180deg, #503726 0%, #b28e6c 50%, #ab8162 100%);
+}
+
+.game-panel {
+  width: min(920px, 100%);
+  margin: 0 auto;
+  padding: 12px;
+  border-radius: 18px;
+  background: rgba(255, 250, 244, 0.96);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(80, 55, 38, 0.14);
+}
+
+.game-header {
+  display: none;
+}
+
+.playing-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  border-radius: 16px;
+  background: rgba(80, 55, 38, 0.14);
+  border: 1px solid rgba(80, 55, 38, 0.24);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.timer-circle {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #503726;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress-text {
+  display: flex;
+  flex-direction: column;
+  color: #503726;
+}
+
+.progress-label {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.progress-value {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.remove-card-button {
+  border: none;
+  background: #503726;
+  color: #fff;
+  border-radius: 16px;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.4);
+}
+
+.remove-card-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.center-screen {
+  display: grid;
+  place-items: center;
+  min-height: 420px;
+}
+
+.message-card {
+  background: rgba(255, 255, 255, 0.96);
+  padding: 36px 30px 24px;
+  border-radius: 28px;
+  border: 1px solid rgba(80, 55, 38, 0.12);
+  box-shadow: rgba(80, 55, 38, 0.12) 0 20px 40px -20px;
+  text-align: center;
+  max-width: 560px;
+}
+
+.start-decor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.start-decor-card {
+  width: 78px;
+  height: 104px;
+  border-radius: 18px;
+  overflow: hidden;
+  transform: rotate(-4deg);
+  box-shadow: rgba(80, 55, 38, 0.2) 0 10px 20px -12px;
+}
+
+.start-decor-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.start-decor-card.card-1 {
+  transform: rotate(-6deg) translateY(2px);
+}
+
+.start-decor-card.card-2 {
+  transform: rotate(4deg) translateY(-6px);
+}
+
+.start-decor-card.card-3 {
+  transform: rotate(-2deg) translateY(4px);
+}
+
+.message-card h2 {
+  margin: 0 0 18px;
+  font-size: 32px;
+  color: #503726;
+}
+
+.message-card p {
+  margin: 0 0 28px;
+  color: #6f5846;
+  line-height: 1.75;
+}
+
+.primary-button,
+.action-button {
+  border: none;
+  cursor: pointer;
+  border-radius: 18px;
+  font-size: 16px;
+  padding: 12px 18px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.primary-button {
+  background: #503726;
+  color: #fff;
+  box-shadow: 0 10px 22px -16px rgba(80, 55, 38, 0.7);
+}
+
+.primary-button.large {
+  width: 100%;
+  padding: 16px 22px;
+  font-size: 18px;
+}
+
+.primary-button:hover,
+.action-button:hover {
+  transform: translateY(-1px);
+}
+
+.primary-button:disabled,
+.action-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.time-expired-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.38);
+  z-index: 10;
+}
+
+.time-expired-card {
+  width: min(420px, calc(100% - 32px));
+  padding: 26px 24px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: rgba(80, 55, 38, 0.2) 0 24px 40px -24px;
+  text-align: center;
+  border: 1px solid rgba(80, 55, 38, 0.15);
+}
+
+.time-expired-title {
+  font-size: 26px;
+  color: #503726;
+  margin-bottom: 12px;
+}
+
+.time-expired-text {
+  color: #6f5846;
+  line-height: 1.7;
+  margin-bottom: 22px;
+}
+
+.controls-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin: 18px 0 16px;
+}
+
+.action-button {
+  background: #fff;
+  border: 1px solid rgba(124, 92, 255, 0.18);
+  color: #4b3b72;
+}
+
+.action-button.secondary {
+  background: #f6f1ff;
+  color: #5f4d8d;
+}
+
+.status-bar {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(120px, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.status-item {
+  padding: 16px;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid rgba(124, 92, 255, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 8px 20px -14px;
+  color: #3c2f57;
+}
+
+.status-main {
+  background: linear-gradient(135deg, #7c5cff 0%, #9d76ff 100%);
+  color: #fff;
+}
+
+.status-label {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  opacity: 0.8;
+  margin-bottom: 8px;
+}
+
+.status-value {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.board {
+  display: grid;
+  gap: 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card-placeholder {
+  width: 100%;
+  aspect-ratio: 1 / 1.3;
+  border-radius: 22px;
+  background: transparent;
+}
+
+.card-button {
+  border: none;
+  background: transparent;
+  padding: 0;
+  perspective: 800px;
+  width: 100%;
+  aspect-ratio: 1 / 1.3;
+  max-width: none;
+  min-height: 100%;
+}
+
+.card-front img,
+.card-back {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.45s ease;
+}
+
+.card-button.flipped .card-inner,
+.card-button.matched .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-button.matched {
+  animation: shrinkFade 0.4s forwards;
+}
+
+@keyframes shrinkFade {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  60% {
+    opacity: 0.85;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+}
+
+.card-face {
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.card-front {
+  transform: rotateY(180deg);
+  background: #fff;
+  display: grid;
+  place-items: center;
+  padding: 12px;
+}
+
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card-back {
+  background: center / cover no-repeat;
+  border: 2px solid rgba(255, 255, 255, 0.28);
+}
+
+.card-button:disabled {
+  pointer-events: none;
+}
+
+@media (min-width: 0px) {
+  .board {
+    grid-template-columns: repeat(3, minmax(90px, 1fr));
+  }
+}
+
+@media (min-width: 680px) {
+  .board {
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+  }
+}
+
+@media (min-width: 960px) {
+  .board {
+    grid-template-columns: repeat(6, minmax(100px, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .game-panel {
+    padding: 18px;
+  }
+
+  .status-bar {
+    grid-template-columns: 1fr 1fr;
+  }
+}
