@@ -1,113 +1,15 @@
 import { useEffect, useRef, useState } from 'react'
-import card1 from './assets/card-1.png'
-import card2 from './assets/card-2.png'
-import card3 from './assets/card-3.png'
-import card4 from './assets/card-4.png'
-import card5 from './assets/card-5.png'
-import card6 from './assets/card-6.png'
-import card7 from './assets/card-7.png'
-import card8 from './assets/card-8.png'
-import card9 from './assets/card-9.png'
-import card10 from './assets/card-10.png'
 import cardCover from './assets/card-cover.png'
 import './App.css'
-
-type ScreenState = 'start' | 'playing' | 'levelComplete' | 'finished' | 'failed'
-
-type CardFace = {
-  id: number
-  image: string
-}
-
-type GameCard = {
-  id: string
-  faceId: number
-  image: string
-  matched: boolean
-}
-
-type LevelConfig = {
-  label: string
-  pairs: number
-  time: number
-  faces: CardFace[]
-}
-
-const levels: LevelConfig[] = [
-  {
-    label: '关卡 1',
-    pairs: 3,
-    time: 10,
-    faces: [
-      { id: 1, image: card1 },
-      { id: 2, image: card2 },
-      { id: 3, image: card3 },
-    ],
-  },
-  {
-    label: '关卡 2',
-    pairs: 6,
-    time: 15,
-    faces: [
-      { id: 1, image: card1 },
-      { id: 2, image: card2 },
-      { id: 3, image: card3 },
-      { id: 4, image: card4 },
-      { id: 5, image: card5 },
-      { id: 6, image: card6 },
-    ],
-  },
-  {
-    label: '关卡 3',
-    pairs: 8,
-    time: 20,
-    faces: [
-      { id: 1, image: card1 },
-      { id: 2, image: card2 },
-      { id: 3, image: card3 },
-      { id: 4, image: card4 },
-      { id: 5, image: card5 },
-      { id: 6, image: card6 },
-      { id: 7, image: card7 },
-      { id: 8, image: card8 },
-    ],
-  },
-  {
-    label: '关卡 4',
-    pairs: 10,
-    time: 30,
-    faces: [
-      { id: 1, image: card1 },
-      { id: 2, image: card2 },
-      { id: 3, image: card3 },
-      { id: 4, image: card4 },
-      { id: 5, image: card5 },
-      { id: 6, image: card6 },
-      { id: 7, image: card7 },
-      { id: 8, image: card8 },
-      { id: 9, image: card9 },
-      { id: 10, image: card10 },
-    ],
-  },
-]
-
-const shuffle = <T,>(items: T[]) => {
-  const copy = [...items]
-  for (let i = copy.length - 1; i > 0; i -= 1) {
-    const j = Math.floor(Math.random() * (i + 1))
-    ;[copy[i], copy[j]] = [copy[j], copy[i]]
-  }
-  return copy
-}
-
-const buildDeck = (level: LevelConfig): GameCard[] => {
-  return shuffle(
-    level.faces.flatMap((face) => [
-      { id: `${face.id}-a`, faceId: face.id, image: face.image, matched: false },
-      { id: `${face.id}-b`, faceId: face.id, image: face.image, matched: false },
-    ]),
-  )
-}
+import StartScreen from './components/StartScreen'
+import PlayingHeader from './components/PlayingHeader'
+import Board from './components/Board'
+import TimeExpiredPrompt from './components/TimeExpiredPrompt'
+import LevelCompleteScreen from './components/LevelCompleteScreen'
+import FinishedScreen from './components/FinishedScreen'
+import FailedScreen from './components/FailedScreen'
+import { levels, buildDeck } from './game'
+import type { ScreenState, GameCard } from './types'
 
 function App() {
   const [screen, setScreen] = useState<ScreenState>('start')
@@ -263,17 +165,9 @@ function App() {
   useEffect(() => {
     const preloadSources = [
       cardCover,
-      card1,
-      card2,
-      card3,
-      card4,
-      card5,
-      card6,
-      card7,
-      card8,
-      card9,
-      card10,
+      ...levels.flatMap((level) => level.faces.map((face) => face.image)),
     ]
+
     const imagePromises = preloadSources.map(
       (src) =>
         new Promise<void>((resolve) => {
@@ -395,94 +289,6 @@ function App() {
     }
   }, [transitionSeconds, screen, levelIndex])
 
-  const renderPlayingHeader = () => (
-    <div className="playing-header">
-      <div className="header-left">
-        <div className="timer-circle">{Math.max(timeLeft, 0)}</div>
-        <div className="progress-text">
-          <div className="progress-label">当前进度</div>
-          <div className="progress-value">关卡 {levelIndex + 1}/{levels.length}</div>
-        </div>
-      </div>
-      <div className="header-right">
-        <button
-          className="remove-card-button"
-          type="button"
-          onClick={handleRemovePair}
-          disabled={removeLeft <= 0 || screen !== 'playing' || isBoardLocked}
-        >
-          消除卡 {removeLeft}/2
-        </button>
-      </div>
-    </div>
-  )
-
-  const renderStartDecor = () => (
-    <div className="start-decor">
-      {[0, 1, 2].map((index) => (
-        <div key={index} className={`start-decor-card card-${index + 1}`}>
-          <img src={cardCover} alt="开始装饰卡片" />
-        </div>
-      ))}
-    </div>
-  )
-
-  const renderBoard = () => {
-    const gridColumns = cardSize.width
-      ? `repeat(${boardColumns}, ${cardSize.width}px)`
-      : `repeat(${boardColumns}, minmax(80px, 1fr))`
-
-    return (
-      <div
-        ref={boardRef}
-        className="board"
-        style={{ gridTemplateColumns: gridColumns, justifyContent: 'center' }}
-      >
-        {cards.map((card) => {
-          const isFlipped = flippedIds.includes(card.id) || card.matched
-          return (
-            <button
-              key={card.id}
-              type="button"
-              className={`card-button ${isFlipped ? 'flipped' : ''} ${card.matched ? 'matched' : ''}`}
-              onClick={() => handleCardClick(card)}
-              disabled={isBoardLocked || flippedCount === 2}
-              style={cardSize.width ? { width: `${cardSize.width}px`, height: `${cardSize.height}px` } : undefined}
-            >
-              <div className="card-inner">
-                <div className="card-face card-front">
-                  <img src={card.image} alt="卡片" />
-                </div>
-                <div
-                  className="card-face card-back"
-                  style={{ backgroundImage: `url(${cardCover})` }}
-                />
-              </div>
-            </button>
-          )
-        })}
-      </div>
-    )
-  }
-
-  const renderTimeExpiredPrompt = () => {
-    if (!timeExpired || addTimeLeft <= 0) {
-      return null
-    }
-
-    return (
-      <div className="time-expired-overlay">
-        <div className="time-expired-card">
-          <div className="time-expired-title">时间到啦！</div>
-          <div className="time-expired-text">你还有 {addTimeLeft} 张加时卡，可继续补时 10 秒。</div>
-          <button className="primary-button large" type="button" onClick={handleAddTime}>
-            使用加时卡 +10s
-          </button>
-        </div>
-      </div>
-    )
-  }
-
   return (
     <div className="app-shell">
       <div className="game-panel">
@@ -492,75 +298,52 @@ function App() {
         </header>
 
         {screen === 'start' && (
-          <section className="center-screen">
-            <div className="message-card">
-              {renderStartDecor()}
-              <h2>准备开始了吗？</h2>
-              <p>可可嫑嫑米米是最好的好朋友。</p>
-              <button
-                className="primary-button large"
-                type="button"
-                onClick={startGame}
-                disabled={!assetsLoaded}
-              >
-                {assetsLoaded ? '开始游戏' : '正在加载图片...'}
-              </button>
-              <div className="start-divider">或</div>
-              <button
-                className="primary-button large"
-                type="button"
-                onClick={startFromFourthLevel}
-                disabled={!assetsLoaded}
-              >
-                直接从第四关开始
-              </button>
-            </div>
-          </section>
+          <StartScreen
+            assetsLoaded={assetsLoaded}
+            cardCover={cardCover}
+            onStart={startGame}
+            onStartFromFourthLevel={startFromFourthLevel}
+          />
         )}
 
         {screen === 'playing' && (
           <>
-            {renderPlayingHeader()}
-            {renderBoard()}
-            {renderTimeExpiredPrompt()}
+            <PlayingHeader
+              timeLeft={timeLeft}
+              levelIndex={levelIndex}
+              totalLevels={levels.length}
+              removeLeft={removeLeft}
+              isBoardLocked={isBoardLocked}
+              onRemovePair={handleRemovePair}
+            />
+            <Board
+              cards={cards}
+              flippedIds={flippedIds}
+              cardSize={cardSize}
+              boardColumns={boardColumns}
+              isBoardLocked={isBoardLocked}
+              flippedCount={flippedCount}
+              cardCover={cardCover}
+              boardRef={boardRef}
+              onCardClick={handleCardClick}
+            />
+            {timeExpired && addTimeLeft > 0 && (
+              <TimeExpiredPrompt addTimeLeft={addTimeLeft} onAddTime={handleAddTime} />
+            )}
           </>
         )}
 
         {screen === 'levelComplete' && (
-          <section className="center-screen">
-            <div className="message-card">
-              <h2>{currentLevel.label} 通关！</h2>
-              <p>下一关将在 {transitionSeconds} 秒后开始。</p>
-              <button className="primary-button large" type="button" onClick={() => setTransitionSeconds(0)}>
-                立即进入下一关
-              </button>
-            </div>
-          </section>
+          <LevelCompleteScreen
+            levelLabel={currentLevel.label}
+            transitionSeconds={transitionSeconds}
+            onSkip={() => setTransitionSeconds(0)}
+          />
         )}
 
-        {screen === 'finished' && (
-          <section className="center-screen">
-            <div className="message-card">
-              <h2>恭喜你！全关通关</h2>
-              <p>你已经完成所有 4 个关卡。</p>
-              <button className="primary-button large" type="button" onClick={restartGame}>
-                再来一次
-              </button>
-            </div>
-          </section>
-        )}
+        {screen === 'finished' && <FinishedScreen onRestart={restartGame} />}
 
-        {screen === 'failed' && (
-          <section className="center-screen">
-            <div className="message-card">
-              <h2>挑战失败</h2>
-              <p>时间耗尽，游戏结束。请从第一关重新开始。</p>
-              <button className="primary-button large" type="button" onClick={restartGame}>
-                重新开始
-              </button>
-            </div>
-          </section>
-        )}
+        {screen === 'failed' && <FailedScreen onRestart={restartGame} />}
       </div>
     </div>
   )
