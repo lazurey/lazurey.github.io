@@ -165,7 +165,6 @@ function App() {
     setFlippedIds([])
     setTimeLeft(nextLevel.time)
     setRemoveLeft(2)
-    setAddTimeLeft(3)
     setTimeExpired(false)
     setTransitionSeconds(3)
     setIsBoardLocked(false)
@@ -173,10 +172,12 @@ function App() {
   }
 
   const startGame = () => {
+    setAddTimeLeft(3)
     startLevel(0)
   }
 
   const restartGame = () => {
+    setAddTimeLeft(3)
     startLevel(0)
   }
 
@@ -210,7 +211,7 @@ function App() {
       flipTimeoutRef.current = window.setTimeout(() => {
         setFlippedIds([])
         setIsBoardLocked(false)
-      }, 900)
+      }, 600)
     }
   }
 
@@ -363,7 +364,7 @@ function App() {
 
       const maxWidthPerCard = Math.floor(availableWidth / columns)
       const maxHeightPerCard = Math.floor(availableHeight / rows)
-      const computedWidth = Math.max(80, Math.min(maxWidthPerCard, Math.floor(maxHeightPerCard / 1.3)))
+      const computedWidth = Math.max(60, Math.min(maxWidthPerCard, Math.floor(maxHeightPerCard / 1.3)))
       const computedHeight = Math.round(computedWidth * 1.3)
 
       setCardSize({ width: computedWidth, height: computedHeight })
