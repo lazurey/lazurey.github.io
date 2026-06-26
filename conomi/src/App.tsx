@@ -176,6 +176,11 @@ function App() {
     startLevel(0)
   }
 
+  const startFromFourthLevel = () => {
+    setAddTimeLeft(3)
+    startLevel(3)
+  }
+
   const restartGame = () => {
     setAddTimeLeft(3)
     startLevel(0)
@@ -499,6 +504,15 @@ function App() {
                 disabled={!assetsLoaded}
               >
                 {assetsLoaded ? '开始游戏' : '正在加载图片...'}
+              </button>
+              <div className="start-divider">或</div>
+              <button
+                className="primary-button large"
+                type="button"
+                onClick={startFromFourthLevel}
+                disabled={!assetsLoaded}
+              >
+                直接从第四关开始
               </button>
             </div>
           </section>

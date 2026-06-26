@@ -149,6 +149,25 @@
   line-height: 1.75;
 }
 
+.start-divider {
+  margin: 14px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(80, 55, 38, 0.72);
+  font-size: 14px;
+  position: relative;
+}
+
+.start-divider::before,
+.start-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(80, 55, 38, 0.16);
+  margin: 0 12px;
+}
+
 .primary-button,
 .action-button {
   border: none;
